@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fixed navbar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<style>
+	 /***************************** 
+	  FIXED NAVBAR
+	  1. utilisez position:fixed et top:0.
+	  2. ajoutez un margin-top(au contenu) qui est > = à la somme height #entete + height #menu
+	 */
+	 #menu{
+	   position:fixed;
+	   width:100%;
+	   top:0;
+	 }
+	 /* Add a top margin to avoid content overlay */
+	 #contenu{
+	    margin-top: 52px; 
+	 }
+		 
+	</style>
+</head>
+
+<body>
+    <!--
+	<div id="entete"></div>
+	-->
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar-sidebar.html">Fixed navbar & sidbar</a>				
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+                <a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>				
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>
+	</div>
+	
+	
+	<div id="contenu">
+		<div class="colone-laterale ">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu ">
+		    <h2 class="grosTitre"><span class="box-shadow-titre" > Fixed navbar </span></h2>
+            <img src="img/d1.png">
+			<img src="img/d2.png">
+			<img src="img/d3.png">
+			<img src="img/d4.png">
+			<img src="img/d5.png">
+		</div>
+		
+		<div class="colone-laterale ">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	
+	
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

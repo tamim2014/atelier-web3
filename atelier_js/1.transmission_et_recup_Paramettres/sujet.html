@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  
+  	<script >
+	 function toto(a){ var a="nom"; return a; }
+	 function pouet(b){ var b="prenom"; return b; }
+	 //function bonjour( ){ toto(a); pouet(b);  }
+	 function bonjour(){  document.write( toto(a)+"......." +pouet(b) ); }
+
+	</script>
+</head>
+
+<body>
+
+ 
+	J'ai une function toto(a){}<br>
+	Une function pouet(b){}<br><br>
+
+	Je voudrais faire<br><br>
+
+	function bonjour(){<br>
+	  function toto(a){} <br>
+	  function pouet(b){}<br>
+	}<br>
+	Et récupérer les paramètres a et b dans la fonction bonjour,<br>
+	 et après appeler la fonction bonjour.
+	 
+	 <p>
+	    <b> C'est la solution (avec les prompts) qui répond exactement au problème </b><br>
+		<i>Les solutions 4 et 5 conserne un autre sujet (<b>définir ce sujet ...</b>)</i>
+	
+	 </p>
+	 <strong>
+	    <h2><u>Rappels</u>: Transmission de paramèttres</h3>
+		<ul>
+		  <li>Déclarer des variables globales(càd utilisables par toutes les fonctions)<br><br></li>
+		  <li>ENTR&Eacute;E: renseigner les valeurs(paramèttres) à transmettre dans ces variables golbales</li>
+		  <li style="color:gray">Traitement: ...</li>
+		  <li>SORTIE: récupération ( par appel de la <i style="color:gray">fonction traitement</i>) et affichage</li>
+		</ul>
+		
+	 </strong>
+	 
+
+	
+</body>
+</html>

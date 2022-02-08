@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Sticky navbar</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<style>
+	.sticky {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+				<a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>						
+			</div>
+		</div>
+	    <a href="interfaces-js.html" >Interfaces js</a>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu">
+		    <h2 class="grosTitre" ><span class="box-shadow-titre" > Sticky navbar </span></h2>
+            <img src="img/sticky-navbar1.png">			
+			<img src="img/script-sticky-navbar.png">
+			<div class="planche">
+				<h3> <u>Répère Y</u>? Du haut vers le bas <b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></h3>
+				<h3> <u>Répère X</u>? De gauche à droite </h3>
+				<h3> <u>Orignine</u>? Point supérieur gauche </h3>
+			</div>
+			<img src="img/offsetTop.png">
+
+			<div class="planche">
+				<h3>La proprieté offsetTop</h3>
+				<p class="paragraphe">
+				   <b style="color:red">offsetTop:</b> renvoie la position supérieure (en pixels) 
+					par rapport au haut de l'élément offsetParent.
+					
+				</p>
+				La valeur retournée comprend:
+				<ul type="square">
+					<li>la position supérieure et la marge de l'élément</li>
+					<li>le rembourrage supérieur</li>
+					<li>la barre de défilement </li>
+					<li>la bordure de l'élément offsetParent</li>
+				</ul>
+
+			</div>
+			
+			<div class="planche">
+				<h3>La proprieté offsetParent</h3>
+				<p class="paragraphe">
+				   <b style="color:red">offsetParent:</b> renvoie l'ancêtre le plus proche qui a une position autre que statique.<br>
+				</p>
+
+				offsetParent est utilisé avec les propriétés :
+				<ul type="square">
+					<li style="color:#660033"> offsetLeft</li>
+					<li style="color:#990033"> offsetTop</li>
+				</ul>
+			</div>
+			<div class="planche" >
+				<h3>Les proprietés <b style="color:#660033">pageXOffset</b> & <b style="color:#990033">pageYOffset</b></h3>
+				<p class="paragraphe">
+				   Elles renvoient les pixels du document (en cours de défilement) à partir du coin supérieur gauche de la fenêtre (horizontalement et verticalement).<br>
+				</p>
+
+				Elles sont équivalent aux propriétés :
+				<ul type="square">
+					<li style="color:#660033"> scrollX</li>
+					<li style="color:#990033"> scrollX</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" style="color:gray; padding:1em; height:auto;">
+	 &#8718; Proprierés:<br>
+	 &emsp;&bull; offsetTop<br>
+	 &emsp;&bull; pageYOffset<br>
+	 &#8718; Méthodes:<br>
+	 &emsp;&bull; classList.add("newClassName");<br>
+	 &emsp;&bull; classList.toggle("newClassName");
+	</div>
+	<script>
+		window.onscroll = function(){ myFunction() };
+
+		var menu = document.getElementById("menu"); 
+		var positionInitiale = menu.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset > positionInitiale){
+			menu.classList.add("sticky");
+		  } else {
+			menu.classList.remove("sticky");
+		  }
+		}
+	</script>
+
+</body>
+</html>

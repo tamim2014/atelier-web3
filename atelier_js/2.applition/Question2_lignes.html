@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+	    body{ margin:23% 30%; background:#bbb; }
+		table{width:auto;}
+	    table tr:nth-child(2n) { background-color: #dddddd; }
+        table tr:nth-child(2n+1) { background-color: #ccc; }
+        table tr td{padding:.5em 1em;}		
+	</style>
+	<script>
+	  var a=prompt("Entrer le 1er paramettre","");
+      var b=prompt("Entrer le 2ème paramettre","");
+	  
+      function param1(a) { return a ; }
+      function param2(b){  return b; }
+
+      function recup1(){
+       document.write(param1(a) );
+      }
+	  function recup2(){
+       document.write(param2(b) );
+      }
+	</script>
+
+</head>
+<body>
+    <table>
+		  <tr>
+			 <td><script>recup1();</script></td>
+		  </tr>
+		  <tr>
+			 <td><script>recup2();</script></td>	  
+		  </tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* 1. Le conteneur du bouton */
+.container-btn {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+
+}
+
+/* 2. Le bouton */
+
+.container-btn .btn {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+
+  background-color: #f1f1f1;
+  color: black;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  
+  outline:none;
+	
+   font-size: 12px !important;
+   padding: 4px 8px !important;
+   	transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+
+	
+}
+
+.container-btn .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+
+/* 3.After button */
+
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test1</title>
+	<style>
+
+		*{box-sizing: border-box;}
+		body{margin:0; line-height: :1.5; background-color: #ECECEA;} 
+		
+     /*********************************************************************************/
+    /********************  ZONNING ***************************************************/
+   /*********************************************************************************/
+   
+		#entete{height: 200px; background-color: #555; padding: }
+		#footer{height: 100px; background-color: #555; padding: }
+
+		#menu{height: 52px; background-color: #c4c4c4;}
+		#menu a, #menu .dropdown{
+			float:left;
+			padding: 16.5px 16px;
+			text-decoration:none;
+		}
+		#menu a:hover, #menu .dropdown:hover{ background-color: #ccf; }
+
+		.divH{
+			float:left;
+			width: 31.31%;
+			margin:0 1%;
+			padding:1%;
+			border: 1px solid #8c8b8b;
+			height: 400px;
+		}
+		
+	 /*************************************************************************/
+	/**************************** DROPDOWN ***********************************/
+   /*************************************************************************/
+   
+		.dropdown{ 
+
+			overflow:hidden; 
+			float:left;
+			padding:16.5px 16px;
+		} 
+
+		.dropdown-btn {
+			border:none;
+			outline:none;
+			margin:0;
+			background-color: inherit;
+		}
+
+		.dropdown-content{ 
+			display: none;
+			position:absolute;
+			background-color: #ddd;
+			min-width: 160px;
+			z-index:1;
+			margin: 17px 0px 0px -15px; /*ajuster le dropdown-content sous le dropdown */
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display:block;
+		}
+
+		#menu .dropdown-content a{
+			display:block;
+			float:none;
+		}
+		.accueil {background:#111; color:#ECECEA; font-weight:bold; font-size:2em; line-height:0.59;}
+	</style>
+</head>
+<body>
+	<div id="entete">  </div>
+
+	
+	<div id="menu">  
+		<a href="index-dropdown.html" class="accueil" >&#8962;</a> <a href="#">item1</a> <a href="#">item2</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="#">Link1</a> <a href="#">Link2</a> <a href="#">Link3</a>				
+			</div>
+		</div>  
+	</div>
+	<div id="contenu">
+		<div class="divH"> </div>
+		<div class="divH"></div>
+		<div class="divH"></div>
+	</div>	     
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

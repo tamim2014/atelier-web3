@@ -1,0 +1,15 @@
+28.06.21
+
+
+Note chrono du week and:
+
+Samedi 26 Juin:           s6= 30mn         s7 = 30mn
+Dimanche 26 Juin:      s8= 12mn         s9 = 25mn        s10 =
+
+
+
+1. Saisie dans un (ou plusieurs prompts)
+2. Afficher ces donnees dans une table( en mode excel ou mieux)
+3. Separer les cellules de données
+
+3.  Persister les donnees ( pour pas les  perdre à la fermeture de session)*

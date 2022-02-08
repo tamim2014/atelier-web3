@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css">
+	<style>
+	    /* Pour avoir un subnav on modifie : 
+		 * 2 proprietés du dropdown-content
+         * 1 proprieté de la balise <a> 		 
+		 */	
+		 
+		.dropdown-content{
+			width:100%; /* min-width:160px */
+            left:0;			
+		}
+		
+		#menu .dropdown-content a{		    
+			 float:left; /* float:none; */            		 
+		}
+		
+        /* quelques détails personalisables */
+		 .dropdown-content { background:#ccf; }
+		 #menu .dropdown-content a:hover { background:whitesmoke; }
+		
+	</style>
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+				<a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>						
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>
+	</div><!-- #menu-->
+	
+	<div id="contenu">
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		<div class="colone-contenu">
+		    <h2 class="grosTitreBlanc"  ><span class="box-shadow-titre-blanc" >Dropdown Subnav</span></h2>
+            <img src="img/subnav.png">
+		</div>
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div><!-- #contenu -->
+	
+	<div style="clear:both"></div>
+	<div id="footer">
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+
+</body>
+</html>

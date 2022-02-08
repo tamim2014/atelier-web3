@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Rappels javascripts</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" type="text/css" href="css/sticky.css">	
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+				<a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>							
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale" id="sidbarG">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu" id="contenu_">
+		    <h3 class="grosTitre"><span class="box-shadow-titre" > Interfaces js </span></h3>
+            <div class="planche">
+				<h3> <u>Window</u>: ...... </h3>
+				<h3> <u>Document</u>: ....... </h3>
+				<h3> <u>HTMLElement</u>: ........... </h3>
+			</div>
+			
+			<div class="planche">
+			    <h1> Interface Window </h1>
+				<h3 style="color:#4d94ff"> &#9193;&nbsp; Propriétés </h3>
+				<ul type="square">
+					<li>Window.<b style="color:#990033">document</b> </li>
+					<li>Window.<b style="color:#990033">location</b><br><br> </li>
+					<li>Window.<b style="color:#990033">pageYOffset</b> &nbsp; <b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></li>
+					<li>Window.<b style="color:#990033">pageXOffset</b></li>
+				</ul>
+		
+				<p class="paragraphe">
+                   Ces propriétés sont équivalentes<br>
+				   <b style="color:#660066">&#8718;  Window.pageYOffset &equiv; Window.scrollY</b><br>
+				   <b style="color:#990066; padding-bottom:1em;">&#8718;  Window.pageXOffset &equiv; Window.scrollX</b><br>
+				</p>
+				<h3 style="color:#4d94ff"> &#9193;&nbsp; Méthodes </h3>
+				<ul type="square">
+					<li>Window.<b style="color:#660066">alerte()</b></li>
+					<li>Window.<b style="color:#660066">blur()</b></li>
+					<li>Window.<b style="color:#660066">close()</b></li>
+					<li>Window.<b style="color:#660066">open()</b></li>
+					<li>Window.<b style="color:#660066">focus()</b></li>
+					<li>Window.<b style="color:#660066">scroll()</b></li>
+					<li>Window.<b style="color:#660066">scrollBy()</b></li>
+				</ul>
+			</div>
+			
+			<div class="planche">
+			    <h1> Interface Document </h1>
+				<img src="img/Document.png" style="padding:0; margin:-1em 2em 1em 0.5em ; "/>
+				
+			
+				<h3 style="color:#4d94ff; "> &#9193;&nbsp; Propriétés </h3>
+				<ul type="square" >
+					<li>Document.<b style="color:#990033">stylesheet</b> </li>
+					<li>Document.<b style="color:#990033">height</b><br><br> </li>
+					<li>Document.<b style="color:#990033">location</b> &nbsp; <b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></li>
+					<li>Document.<b style="color:#990033">plugins</b></li>
+				</ul>
+		
+				<p class="paragraphe" >
+                   Ces propriétés sont équivalentes<br>
+				   <b style="color:#660066">&#8718;  Window.pageYOffset &equiv; Window.scrollY</b><br>
+				   <b style="color:#990066; padding-bottom:1em;">&#8718;  Window.pageXOffset &equiv; Window.scrollX</b><br>
+				</p>
+				<h3 style="color:#4d94ff"> &#9193;&nbsp; Méthodes </h3>
+				<ul type="square">
+					<li>Document.<b style="color:#660066">createElement()</b></li>
+					<li>Document.<b style="color:#660066">createEvent()</b></li>
+					<li>Document.<b style="color:#660066">createTouchList()</b></li>
+				</ul>
+						
+				<p class="paragraphe" >
+                   L'interface <b>Document</b> est étendu avec l'interface <b>ParentNode</b>
+				</p>
+				<ul type="square">
+					<li>document.<b style="color:#660066">getElementById(</b> String id <b style="color:#660066">)</b></li>
+					<li>document.<b style="color:#660066">querySelector(</b> String selector <b style="color:#660066">)</b></li>
+				</ul>
+				
+				<p class="paragraphe" >
+                   Extension pour les document HTML
+				</p>
+				<ul type="square">
+				    <li>document.<b style="color:#660066">open()</b> </li>
+				    <li>document.<b style="color:#660066">close()</b> </li>
+					<li>document.<b style="color:#660066">hasFocus()</b> </li>
+					<li>document.<b style="color:#660066">getElementByName(</b> String  name <b style="color:#660066">)</b></li>
+					
+				</ul>
+			</div>
+			
+
+		<div class="planche">
+			    <h1> Interface HTMLElement </h1>
+				
+				  C'est une interface abstraite pour le DOM.<br>
+				  Elle est heritée par tous les éléments HTML
+			
+				
+			
+				<h3 style="color:#4d94ff; "> &#9193;&nbsp; Propriétés </h3>
+				<ul type="square" >
+					
+					<li>element.<b style="color:#990033">id</b><br> </li>
+					<li>element.<b style="color:#990033">lang</b> </li>
+					<li>element.<b style="color:#990033">title</b><br><br></li>
+					<li>element.<b style="color:#990033">className</b> </li>
+					<li>element.<b style="color:#990033">classList</b>&nbsp; <b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b> </li>
+				</ul>
+				<p class="paragraphe" >
+				   <span style="font:italic 0.9em Calibri Light;">
+					   L'utilisation de <b>classList</b> est une alternative à la propriété 
+					   <b>element.className</b> qui renvoie une chaine composée de la liste des classes, 
+					   séparées par des espaces.
+				   </span><br><br>
+				   
+				   Elle utilise 6 méthodes:<br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">add( String [, String] )</b> &nbsp; <b style="background:#ff1;  border-radius:2px; padding:2px;">&#9888;</b></b><br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">remove( String [, String] )</b></b><br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">toggle( String [, force] )</b></b><br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">item( Number )</b></b><br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">contains( String )</b></b><br>
+				   &nbsp;&nbsp; &#9658; <b>element.<b style="color:#990033">className</b>.<b style="color:#660066">replace( oldClass, newClass )</b></b><br>
+				   Plus de détails sur: <a href="https://developer.mozilla.org/fr/docs/Web/API/Element/classList">developer.mozilla.org</a>
+				</p>
+				
+		
+				<h3 style="color:#4d94ff"> &#9193;&nbsp; Méthodes </h3>
+				<ul type="square">
+					<li>element.<b style="color:#660066">blur()</b></li>
+					<li>element.<b style="color:#660066">click()</b></li>
+					<li>element.<b style="color:#660066">focus()</b></li>
+				</ul>
+						
+		   </div>
+		</div><!-- #colone-contenu -->
+		
+	
+		
+		<div class="colone-laterale" id="sidbarD" >
+			<p class="paragraphe" style="background:#8c8b81" >
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" >
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+    <script type="text/javascript" src="js/sticky.js"></script>
+</body>
+</html>

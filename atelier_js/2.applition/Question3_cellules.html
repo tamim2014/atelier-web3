@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+	    body{ margin:23% 25%; background:#bbb; }
+		table{width:auto;}
+	    table tr:nth-child(2n) { background-color: #dddddd; }
+        table tr:nth-child(2n+1) { background-color: #ccc; }
+        table tr td{padding:.5em 1em;}
+        #td1,#td4 { background:#998;}		
+	</style>
+	<script>
+	  var a=prompt("Date Samedi","");
+      var b=prompt("Sourate6","");
+	  var c=prompt("Sourate7","");
+      var d=prompt("Date Dimanche(2em ligne)  ","");
+	  var e=prompt("Sourate8","");
+      var f=prompt("Sourate9","");
+      var g=prompt("Sourate10","");
+	  // Transmission des paramettres
+      function param1(a) { return a ; }
+      function param2(b){  return b; }
+	  function param3(c) { return c ; }
+	  
+      function param4(d){  return d; }
+      function param5(e){  return e; }
+      function param6(f){  return f; }
+      function param7(g){  return g; }
+	  
+      // Récuperation des paramettres
+      function recup1(){ document.write(param1(a) ); }     
+	  function recup2(){ document.write(param2(b) ); }
+	  function recup3(){ document.write(param3(c) ); }
+	  
+	  function recup4(){ document.write(param4(d) ); }     
+	  function recup5(){ document.write(param5(e) ); }
+	  function recup6(){ document.write(param6(f) ); }
+	  function recup7(){ document.write(param7(g) ); }
+       
+      
+	</script>
+
+</head>
+<body>
+    <table>
+		  <tr>
+			 <td id="td1"><script>recup1();</script></td>
+			 <td><script>recup2();</script></td>
+			 <td><script>recup3();</script></td>
+		  </tr>
+		  <tr>
+			 <td id="td4"><script>recup4();</script></td>	  
+			 <td><script>recup5();</script></td>	  
+			 <td><script>recup6();</script></td>	  
+			 <td><script>recup7();</script></td>	  
+		  </tr>
+	</table>
+
+</body>
+</html>

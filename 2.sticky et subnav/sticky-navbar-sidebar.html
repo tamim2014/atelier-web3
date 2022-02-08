@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<title>Sticky sidebar</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" type="text/css" href="css/sticky.css"> 
+
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+				<a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>							
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale" id="sidbarG">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		
+		<div class="colone-contenu" id="contenu_">
+		    <h3 class="grosTitre" style="padding-left:3em;" ><span class="box-shadow-titre" > Sticky navbar & sidebar </span></h3>
+            <img src="img/sticky-final1.png">
+			<img src="img/sticky-final2.png">
+			
+			<div class="img" style="background:white">
+				<h3 style="color:#660066"> &#9193;&nbsp; Quelle différence entre <b style="color:#990033">left</b> et <b style="color:#990033">margin-left</b> ?</h3>
+				<p class="paragraphe">
+				   <b style="color:#990033">&#8718; top/bottom/left/right:</b> S'appliquent aux éléments en <b>position:absolute.</b> 
+				   Ils indiquent la distance à laquelle l'élément va se trouver par rapport au premier de ses éléments
+				   parents <u><strong style="color:red">qui est en position:relative</strong></u> (ou à &lt;body&gt; s'il n'en trouve aucun).
+				</p>
+				<p class="paragraphe">
+				   <b style="color:#990033">&#8718; margin-*:</b> S'appliquent aux éléments en <b>display:block </b>(et apparentés). 
+				   et indiquent la marge de "vide" que tu veux ajouter autour.
+				</p>
+				<strong style="color:#660066"> &#9193;&nbsp; Bref:</strong>
+				<ul type="square">
+					<li><b style="color:#990066">left</b>: s'applique aux éléments en <b style="color:#990066">position: absolute</b> </li>
+					<li><b style="color:#990066">left</b>: s'applique aux éléments en <b style="color:#990066">position: fixed</b><br><br> </li>
+					<li><b style="color:#990066">margin-left</b>: s'applique aux elts en <b style="color:#990066">position: relative</b></li>
+					<li><b style="color:#990066">margin-left</b>: s'applique aux elts en <b style="color:#990066">float: left</b></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class="colone-laterale" id="sidbarD">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" style="color:#ECECEA;; padding:2em; height:auto; ">
+	 <span style="color:gray;" >&#8718; Proprierés:</span><br>
+	 &emsp;&bull; offsetTop<br>
+	 &emsp;&bull; pageYOffset<br>
+	 <span style="color:gray;" >&#8718; Méthodes:</span><br>
+	 &emsp;&bull; classList.add("newClassName");<br>
+	 &emsp;&bull; classList.toggle("newClassName");
+	</div>
+    <script type="text/javascript" src="js/sticky.js"></script>
+</body>
+</html>

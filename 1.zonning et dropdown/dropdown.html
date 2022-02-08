@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test1</title>
+	<style>
+
+		*{box-sizing: border-box;}
+		body{margin:0; line-height: :1.5; background-color: #ECECEA;} 
+		
+     /*********************************************************************************/
+    /********************  ZONNING ***************************************************/
+   /*********************************************************************************/
+   
+		#entete{height: 200px; background-color: #555; padding: }
+		#footer{height: 100px; background-color: #555; padding: }
+
+		#menu{height: 52px; background-color: #c4c4c4;}
+		#menu a, #menu .dropdown{
+			float:left;
+			padding: 16.5px 16px;
+			text-decoration:none;
+		}
+		#menu a:hover, #menu .dropdown:hover{ background-color: #ccf; }
+
+		.colonne-laterale, .colonne-contenu {
+			float:left;
+			border:none;
+			height: 750px;
+			margin:2% 0% 0% 0%;
+			padding: 0%;
+		}
+		.colonne-laterale { width:25%;  }
+		.colonne-contenu{ width:50%;  }
+		
+		/*valable seulement pour les paraphe de la div central*/
+		.paragraphe-colonne-contenu{
+		   padding:0% 4% 2% 4%;
+		   margin-bottom:1.5em;
+		   border: 1px solid #8c8b8b;
+		   border-radius:2px;
+		}
+		
+		
+	 /*************************************************************************/
+	/**************************** DROPDOWN ***********************************/
+   /*************************************************************************/
+   
+		.dropdown{ 
+
+			overflow:hidden; 
+			float:left;
+			padding:16.5px 16px;
+		} 
+
+		.dropdown-btn {
+			border:none;
+			outline:none;
+			margin:0;
+			background-color: inherit;
+		}
+
+		.dropdown-content{ 
+			display: none;
+			position:absolute;
+			background-color: #ddd;
+			min-width: 160px;
+			z-index:1;
+			margin: 17px 0px 0px -15px; /*ajuster le dropdown-content sous le dropdown */
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display:block;
+		}
+
+		#menu .dropdown-content a{
+			display:block;
+			float:none;
+		}
+	 /*************************************************************************/
+	/**************************** EFFETS CONTENU ( à personnaliser) **********/
+   /*************************************************************************/    
+		.accueil {background:#111; color:#ECECEA; font-weight:bold; font-size:2em; line-height:0.59;}
+		  .remarque{
+	      outline: 8px ridge #c4c4c4;
+          /* border-radius: 2rem; */
+		  text-align:center;
+		  background:#ddd;
+	   }
+	   
+	   .widget-gauche{ width:92%; margin:0% 4%; height:17.6em; border-radius:2px;}
+	   .widget-gauche:hover{ width:200%; margin:0% 4% 0% -104%;}
+	   .zoom { position:absolute; right:3%; margin-top:22%; border-radius:50px; z-index:99; cursor:zoom-in;}
+	   .widget-gauche:hover .zom{display:none;}
+	 
+	</style>
+</head>
+<body>
+	<div id="entete">  </div>
+
+	
+	<div id="menu">  
+		<a href="index-dropdown.html" class="accueil" >&#8962;</a>
+		<a href="#">item1</a> 
+		<a href="#">item2</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="#">Link1</a>
+				<a href="#">Link2</a>
+				<a href="#">Link3</a>				
+			</div>
+		</div>  
+	</div>
+	<div id="contenu">
+	    <!-- Colone1 contenu -->
+		<div class="colonne-laterale">              
+			<img src="img/4elts.png" style="width:100%; height:15em;" />				
+		</div>
+		<!-- Colone2 contenu -->
+		<div class="colonne-contenu"  >
+		     <div class="paragraphe-colonne-contenu" >
+			   <p class="remarque">DropDown en 2 attributs </p>
+			   <img src="img/2attributs.png" style="width:100%; height:5%;" />
+			 </div>
+			 <div class="paragraphe-colonne-contenu" >
+			   <p class="remarque">DropDown en 3 attributs </p>
+			   <img src="img/3attributs.png" style="width:100%; height:9%;" />
+			 </div>
+             <div class="paragraphe-colonne-contenu" >
+		       <p class="remarque">DropDown en 5 attributs </p>
+			   <img src="img/5attributs.png" style="width:100%; height:15%;" />
+			 </div>
+		</div>
+		<!-- Colone3 contenu zoom: &#8981; -->
+		<div class="colonne-laterale" style="cursor:zoom-in;"  >
+		     <img src="img/dropdown-html.png" class="widget-gauche" />	
+			 <img src="img/zoom.png" class="zoom" />	
+			
+		</div>
+	</div><!-- contenu-->	     
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+
+</body>
+</html>

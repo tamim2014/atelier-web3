@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="../chrono.ico"  />
+   <link rel="stylesheet" href="../css/chrono.css" >
+   <link rel="stylesheet" href="../css/footer.css" >
+   <link rel="stylesheet" href="../css/animeheader.css" media="screen" />
+</head>
+<body >
+
+				
+	<div class="topnav">
+	  <a href="../1.Chrono/chrono.html" class="active" >Chrono</a>
+	  <a href="../2.Compte-rebours/minuteur.html" style="padding: 2% 18%;">Compte à rebours</a>
+	</div>
+	
+	<!-- animation  -->
+	<div class="wrapper" style=" ">
+		<div class="obj"></div>
+		<div class="obj"></div>
+	</div>
+
+    <div id="sortie">	
+      <div id="Timer" ></div>
+      <div id="audio" >
+	     <button type="button" id="stop" onclick="stopChrono();" >Stop</button>
+	     <button type="button" onclick=" StartTimer();" >Start</button>
+	  </div>
+    </div>
+	<div class="conteneur-reponses"></div> <!-- séparateur -->
+	<footer > 
+    
+		<!-- Date -->	
+		<span>
+		  	<span id="oDateQc"></span>
+			<script>
+			    
+				function twDateLocale(_id,_date,_lang,_long) {
+				  if(_long) {
+					var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				  } else {
+					var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+				  }
+				  document.getElementById(_id).innerHTML = _date.toLocaleDateString( _lang,options).replace(/\b\w/, function(l){ return l.toUpperCase() });
+				}
+			    twDateLocale("oDateQc",new Date(),"fr-CA",1);
+			</script>
+		</span><br>
+		
+		
+	    <div class="content-footer"  >  
+            <div class="ndreda-footer" > 
+				<!-- animation du footer -->
+				<div style="position: relative; top:0; right:auto; width:auto;">		
+					<div class="wrapper" style=" ">
+						<div class="obj"></div>
+						<div class="obj"></div>
+					</div>
+				</div>	
+		        <!-- contenu du footer -->
+                <ul type="square">
+                    <li >Page<i><sup><small style="color:gray;"> 1mn</small></sup></i> </li>
+                    <li>Juz<i><sup><small style="color:gray;"> 20mn</small></sup></i> </li>
+                </ul>
+            </div>		
+			<span class="copyright_"><span style="color:gray;">2021 &copy; -</span> Chrono</span>
+        </div>	  
+    </footer>
+    <script type="text/javascript" src="chrono.js"></script>
+</body>
+</html>

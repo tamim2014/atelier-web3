@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="shortcut icon" href="../chrono.ico"  />
+   <link rel="stylesheet" href="../css/chrono.css" >
+   
+</head>
+<body >
+    <div class="topnav">
+	  <a href="../1.Chrono/chrono.html">Chrono</a>
+	  <a href="../2.Compte-rebours/minuteur.html" style="padding: 2% 19%;" class="active">Compte à rebours</a>
+	</div>
+    <div id="entree"><script>var temps = prompt("Entrer le temps","")*60;</script></div>
+    <div id="sortie">
+      <div id="Timer" ></div>
+      <div id="audio" >
+	     <button type="button" >Stop</button>
+	     <button type="button" onclick="history.go(0)" >Start</button>
+	  </div>
+    </div>
+
+<script type="text/javascript" src="minuteur.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style>
+		table{width:auto;  }
+		/* frange verticale */
+		table tr:nth-child(2n) { background-color: #dddddd; }
+		table tr:nth-child(2n+1) { background-color: #ccc ; }
+
+		
+		table tr td{padding:.5em .81em; }
+		.t1ligne1 td { text-align:center; }
+		.t1ligne1, .t2ligne1 { background-color: #333 !important; color:#c4c4c4; font-family:system ui; font-weight:bold; }
+		.t1ligne8, .t2ligne8 { background: #332 !important; color:gray; font-size:.81em; }
+		.t1ligne2, .t1ligne3, .t1ligne4, .t1ligne5, .t1ligne6, .t1ligne7 { background:#998;}		
+		.t2ligne2, .t2ligne3, .t2ligne4, .t2ligne5, .t2ligne6, .t2ligne7 { background:#998;}		
+		
+		/* Blem: en mode responsive le contenu après les tables remonte */
+		#main #tables::after {
+		   content: "";
+		   display: block;
+		   clear: both;
+		}
+		/* blem non resolu: je le met en display: none en attendant de trouver l'origine du proplème */
+		@media screen and (max-width: 680px) {
+		 #remarque{display:none; }
+		}
+		/* STYLE SPECIFIQUE A CETTE PAGE */
+		.table1  tr td { width:3.5em;}
+		.t1ligne1 td:first-child { color:#667;}
+		/* Durée sourate( à la vitesse de 40s/p ) */
+		.max { font-family:Arial Black; }
+		
+		.red { background:#cc0000; color:#999; filter: grayscale(19%); }
+	    .red_ { background:#9d3d5f; color:#889;}
+	    .ok{ background:#006600; color:#bba; fon-weight:bold; filter: grayscale(50%); }
+	 </style>
+</head>
+<body>
+
+
+ <h5>Table statique</h5>
+  <div id="newTable">
+      <table><tr class="t1ligne1"><td>Semaine26</td><td><a href="../../CORAN/s27.html" target="_blank" class="toTheCORAN">s27</a></td><td><a href="../../CORAN/s27.html#s28page385" target="_blank" class="toTheCORAN">s28</a></td><td><a href="../../CORAN/s28.html#s29debut" target="_blank" class="toTheCORAN">s29</a></td><td><a href="../../CORAN/s29juz21.html#s30a" target="_blank" class="toTheCORAN">s30</a></td><td><a href="../../CORAN/s31.html" target="_blank" class="toTheCORAN">s31</a></td><td><a href="../../CORAN/s32.html" target="_blank" class="toTheCORAN">s32</a></td></tr><tr class="lundi"><td class="t1ligne2">Lundi   </td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr><tr class="mardi"><td class="t1ligne3">Mardi   </td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr><tr class="mercr"><td class="t1ligne4">Mercredi</td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr><tr class="jeudi"><td class="t1ligne5">Jeudi   </td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr><tr class="vendr"><td class="t1ligne6">Vendredi</td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr><tr class="t1ligne8"><td><small class="tempsRequis">Temps requis: <i style="color:#25fde9">27 mn</i></small></td><td><small>8p<sup>1/2</sup>(<b class="max">6mn</b>)</small></td><td><small>11p(<b class="max">7mn</b>33)</small></td><td><small>8p(<b class="max">5mn</b>33)</small></td><td><small>6p(<b class="max">4mn</b>30)</small></td><td><small>4p(<b class="max">2mn</b>40)</small></td><td><small>3p(<b class="max">2mn</b>)</small></td></tr></table>
+      <h5>Table dynamique: surgit toute seule ( le lundi à 0h00mn00s )</h5>
+  </div>
+
+
+
+<script>
+
+   var jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+   //var aujourdhui = new Date();
+   var nomJour = jours[new Date().getDay()];
+   
+   var newTable = document.getElementById('newTable');	
+   
+   var html = ' <table class="table1 img" style=" background-color:#bbb; width:92%;  display:block; float:left; box-shadow:none; background:transparent;"  >';
+   if(nomJour == 'Lundi') {
+	    html += '<tr class="t1ligne1"><td>Semaine26</td><td><a href="../../CORAN/s27.html" target="_blank" class="toTheCORAN">s27</a></td><td><a href="../../CORAN/s27.html#s28page385" target="_blank" class="toTheCORAN">s28</a></td><td><a href="../../CORAN/s28.html#s29debut" target="_blank" class="toTheCORAN">s29</a></td><td><a href="../../CORAN/s29juz21.html#s30a" target="_blank" class="toTheCORAN">s30</a></td><td><a href="../../CORAN/s31.html" target="_blank" class="toTheCORAN">s31</a></td><td><a href="../../CORAN/s32.html" target="_blank" class="toTheCORAN">s32</a></td></tr> \
+		         <tr class="lundi"><td class="t1ligne2">Lundi   </td> <td> 5 mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr> \
+				 <tr class="mardi"><td class="t1ligne3">Mardi   </td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr> \
+				 <tr class="mercr"><td class="t1ligne4">Mercredi</td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr> \
+				 <tr class="jeudi"><td class="t1ligne5">Jeudi   </td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr> \
+				 <tr class="vendr"><td class="t1ligne6">Vendredi</td> <td> .. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td><td>.. mn</td></tr> \
+				 <tr class="t1ligne8"><td><small class="tempsRequis">Temps requis: <i style="color:#25fde9">27 mn</i></small></td><td><small>8p<sup>1/2</sup>(<b class="max">6mn</b>)</small></td><td><small>11p(<b class="max">7mn</b>33)</small></td><td><small>8p(<b class="max">5mn</b>33)</small></td><td><small>6p(<b class="max">4mn</b>30)</small></td><td><small>4p(<b class="max">2mn</b>40)</small></td><td><small>3p(<b class="max">2mn</b>)</small></td></tr></table>';      
+        document.getElementById('newTable').innerHTML += html;
+   }
+   
+   // add class
+   /*
+   var c11 = document.getElementById('c11');
+   
+	 
+	c11.onclick = function() {
+         var test_ = c11.classList.add('red');	
+	     localStorage.setItem("c11r", "1"+test_);
+		 c11.innerHTML = localStorage.getItem("c11r");
+		 
+	} 
+    c11.innerHTML = localStorage.getItem("c11r");
+	*/
+</script>
+
+</body>
+</html>
+
+

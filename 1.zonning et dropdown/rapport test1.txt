@@ -1,0 +1,6 @@
+ G pas cronometré 
+ 
+Voici les truc que j'ai oublié( i fo en faire un questionnaire de rappel et l'ajouter à l'appli révision
+
+1) Comment enlever le souligné d'1 LIEN ? ................................ text-decoration: none;
+

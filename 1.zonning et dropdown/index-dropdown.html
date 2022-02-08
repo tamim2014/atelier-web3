@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Alignement vertical </title>
+	<link rel="stylesheet" href="dropdown-menu.css" >
+	<!-- icon dropdown -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	
+	    *{
+		     box-sizing:border-box; /* inclure les bordures dans la tailles des boites */
+		}
+		body{
+		     margin:0; /* stabiliser le footer( virer la marge en bas de page */
+			 line-height: 1.5;
+             background: #ECECEA;
+		}
+/******************* EFFETS STRUCTURE( à retenir ) ************************/
+		#entete{ height:200px; background:#555;}
+		#footer{height:100px; background:#555;}			
+		#menu{height:52px; background:#c4c4c4;}
+		#menu a { 
+		    float:left; /* sinon .dropdown se barre à gauche */
+		}
+		.divH {
+			float:left; /* ALIGNEMENT HORIZONTALE - FONDAMENTAL */
+			width:31.31%; 
+			margin:0 1%; 
+			padding:1%; 			
+		}
+
+/******************* EFFETS CONTENU ( à personnaliser) ************************/
+        #menu a { 
+		    padding: 14px 16px;
+		    text-align: center;
+		    text-decoration: none;
+            padding: 14px 16px;
+		}
+		.divH {
+			height:1210px;
+			border:1px solid #8c8b8b; 
+            background:#FFF;			
+		}
+       .remarque{
+	      outline: 8px ridge #c4c4c4;
+          /* border-radius: 2rem; */
+		  text-align:center;
+		  background:#ddd;
+	   }
+	
+	   .bb{
+	     color:#32a1ce;
+		 font-weight:bold;
+	   }
+	   .active{
+          background-color: #666;
+		  color: #ECECEA; 
+		}
+		
+		.accueil {background:#111; color:#ECECEA; font-weight:bold; font-size:2em; line-height:0.75;}
+
+/****************** HORS SUJET: Le petit liste qui explique le code CSS ******************/ 
+ 
+       .idR{color:#115; padding:1px 4px; border-radius:3px;border:1px solid #8c8b8b; box-shadow:2px 2px 0.5px 0.5px #8c8b8b;  }
+	   .divList{ border:0;  padding:0; width:20px; height:20px; margin-right:1.1em;  }
+	   code { font-weight: bold; font-style: italic; background-color: #f0f2f2; color:#555; border-radius: 10px 0 0 0;}
+	   .R{color:#990033; font-weight:bold;  }
+	   
+	   .logo{
+		  font-size: 18px;
+		  padding:0 -5em ;
+		  margin-left:0;
+		 
+		  display:inline;
+		  font-weight:lighter;
+		  text-align:center;
+		  font-family:Arial, Helvetica, sans-serif;
+		  box-shadow:0px 0px 12px #888;
+		  -moz-box-shadow: 0px 10px 2px #888;  
+		  -webkit-box-shadow: 0px 10px 2px #888; 
+		  /* ROUGE */
+		  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+		  color: #dd0000;
+          
+         /* VERT 
+          text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+          color: #090; 
+		  */
+          border-radius:0 99px 0 99px ;	
+          /* background:#8c8b81;*/	
+           background:#666;
+    
+		}
+	</style>
+</head>
+<body>
+	<div id="entete">
+	    <span class="logo">الله ممّا نفعنا بما علّمتنا</span>
+	</div>
+	<div id="menu">
+        <a href="#" class="accueil" >&#8962;</a>	   
+		<a href="#" >Zoning</a>
+		<a href="dropdown.html" >Dropdown</a>
+		<!-- blème: color diférrent pour l'item Dropdown -->
+		<div class="dropdown " style="color:inherit" >				
+			<button class="dropbtn" style="color:inherit">Les tests &nbsp; <i class="fa fa-caret-down"></i></button>		
+			<div class="dropdown-content">
+				  <a href="zoning-test1.html">Test1</a>
+				  <a href="#">rien</a>
+				  <a href="#">rien</a>
+			</div>				  
+		</div>
+    </div>
+	<div id="contenu" >
+	    <!-- Colone1 conenu -->
+		<div class="divH">
+			   <p class="remarque">1. La structure HTML </p>
+			   <img src="img/body.png" style="width:100%; height: 62%;" />
+			   <hr  style="width:100%;"><br><br>
+			   <p class="remarque">DropDown: les 5 fondamentaux </p>
+			   <img src="img/5attributs.png" style="width:100%; height:21%;" />	
+		</div>
+		<!-- Colone2 contenu -->
+		<div class="divH"  >
+			  <p class="remarque">2. La classe <span class="bb">.divH</span></p>
+			  <img src="img/head.png" style="width:100%; height: 62%;" />
+			  <div style="background:#c4c4c4; padding:1em;">
+					<div class="idR divList" ><code ><span class="R">Lg10</span></code>&nbsp;&nbsp;Inclu&nbsp;le&nbsp;SizeBorder&nbsp;dans&nbsp;SizeBox</div>
+					<div class="idR divList" ><code ><span class="R">Lg11</span></code>&nbsp;&nbsp;Stabilise&nbsp;le&nbsp;footer</div>
+					<div class="idR divList" ><code ><span class="R">Lg17</span></code>&nbsp;&nbsp;Aligne&nbsp;<span class="bb">dropdown</span>&nbsp;aux&nbsp;items&nbsp;menu</div>
+					<div class="idR divList" ><code ><span class="R">Lg20</span></code>&nbsp;&nbsp;Alignement&nbsp;horizontal&nbsp;des&nbsp;div</div>
+			  </div>		  
+			  <hr  style="width:100%;">			  
+			  <img src="img/4elts.png" style="width:100%; height:21%;" />					 
+		</div>
+		<!-- Colone3 contenu -->
+		<div class="divH" >
+			 <p class="remarque">3. Le dropdown<br></p>
+			 <img src="img/dropdown.png" style="width:100%; height: 62%;" />
+			 <h3><u>Remarques</u>: <small style="color:#990033;">  .dropdown-content</small></h3>
+			 <p class="remarque"><b style="color:#990033;">.dropdown-content{</b> <b class="bb">position:absolute ;</b> <b style="color:#990033;">}</b></p>
+			   &#9314; Pour rester sous le <b style="color:#990033;"><u>.dropdown</u></b> :
+				<ul style="list-style-type:none">
+					<li>&#9193; le <b style="color:#990033;"><u>.dropdown-content</u></b></li>
+					<li>&#9193; doit être <b class="bb">position:absolute ;</b>&emsp; <span style="color:#111; background:#ff1;"> &#9888;</span></li>				
+				</ul>
+			 <p class="remarque"><b style="color:#bf8040;"> a {</b> <b class="bb">display:block ; &nbsp;</b>  <b class="bb"> &nbsp;float:none ; </b><b style="color:#bf8040;">}</b></p>
+			 &#9315; Un "<b class="bb">display:block</b>" permet à des elts &#9760; &nbsp; &#9760; &nbsp; inline<small>(ici <b style="color:#bf8040;"> &lt; a &gt;</b>)</small> de s'aligner verticalement
+			 <ul style="list-style-type:none">
+				<li>&#9193; Il est accompagé d'un "<b class="bb">float:none</b>" </li>
+				<li>&#9193; Sinon l'effet block est annulé<br> &emsp; &emsp; <small>( par un <b>"float:left"</b> par défaut)</small> </li>
+			 </ul>				 
+		</div><!-- #contenu -->		
+	</div>
+	<div  style="clear:both;"></div>
+	<div id="footer" style="z-index:2;"></div>
+
+</body>
+</html>

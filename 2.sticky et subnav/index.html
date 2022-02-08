@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accueil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- responsive -->
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css" >
+	<link rel="stylesheet" href="css/pagination.css" media="screen" /> 
+	<link rel="stylesheet" href="css/animeheader.css" media="screen" />
+	
+	
+	<script type="text/javascript" src="js/jquery3.4.1.min.js"></script> <!-- pour la pagination dans le footer -->
+	 <script type="text/javascript" src="js/pagination.js"></script>
+	<!-- sticky -->
+	<style>
+	     /********************  DROPDOWN ************************************************/
+	     .dropdown-btn{ 
+		      padding:14px 16px; 
+			  font-size:17px; 
+		  }
+		 
+	     /********************  STICKY ************************************************/
+	    .stickyMenu {
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+	    }
+		.stickyCLG, .stickyCLD {
+		  position: fixed;
+		  top: 5%;
+		  width: 25%;
+		}
+		.stickyCLG{left:0;}
+		.stickyCLD{right:0;}
+		.stickyCC{margin-left:25%;} 
+		/* .stickyMenu, .stickyCLG, .stickyCLD { position:fixed; }
+		.stickyMenu {
+		    position:fixed;
+			top:0;
+			width:100%;
+
+		}
+		
+		.stickyCLG, .stickyCLD { 
+			top:5%;
+			width:25%; 
+		}
+
+		.stickyCLG{left:0;}
+		.stickyCLD{right:0;}
+		.stickyCC{margin-left:25%;} 
+		
+		/********************  FOOTER ************************************************/
+				
+		.footer-table { padding:1em;}
+		.footer-td { padding:0.4em; background:#8c8b81; height:auto;  margin:auto; width:30%; }
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+
+	</style>
+</head>
+<body >
+	<div id="entete" class="entete-fixe" style="padding:2em; color:#ECECEA;">
+	     <span class="logo">الله ممّا نفعنا بما علّمتنا  </span>		
+		<!-- animation du header -->
+		<div style="position: absolute; top:0; right:-15em; width:100%;">		
+			<div class="wrapper">
+				<div class="obj"></div>
+				<div class="obj"></div>
+			</div>
+		</div>		 
+	</div>
+	<div id="menu" >
+		<a href="#" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		
+        <a href="dropdown-sidenav.html">Dropdown sidenav</a>		
+		<div class="dropdown">
+			<button class="dropdown-btn" >Fixed</button>
+			<div class="dropdown-content">
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>
+			    <a href="fixed-navbar-sidebar.html">Fixed navbar & sidbar</a>					
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+                <a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>								
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>	
+	</div>
+	
+	<div id="contenu" style="height:1200px">	    
+		<div class="colone-laterale" id="CLG" ><!-- top: 250px; -->
+			<p class="paragraphe">
+				&#9203; Début:20h<br>
+				&#8987; Fin HTML: 20h10<br>
+				&#8987; Fin CSS et test:21h05 <br>				
+				&#8986; Durée totale: 55mn             
+			</p>			
+		</div>
+		<div class="colone-contenu" id="CC" ><!-- margin-top: 280px; -->
+            <h1 class="grosTitre"><span class="box-shadow-titre" >Zoning</span></h1>
+            <img src="img/z1.png">
+			<img src="img/z2.png">
+			<img src="img/z3.png">
+			<div class="img" style="background:white">
+				<h3 style="color:#660066"> &#9193;&nbsp; Quelle différence entre <b style="color:#990033">left</b> et <b style="color:#990033">margin-left</b> ?</h3>
+				<p class="paragraphe">
+				   <b style="color:#990033">&#8718; top/bottom/left/right:</b> S'appliquent aux éléments en <b>position:absolute.</b> 
+				   Ils indiquent la distance à laquelle l'élément va se trouver par rapport au premier de ses éléments
+				   parents <u><strong style="color:red">qui est en position:relative</strong></u> (ou à &lt;body&gt; s'il n'en trouve aucun).
+				</p>
+				<p class="paragraphe">
+				   <b style="color:#990033">&#8718; margin-*:</b> S'appliquent aux éléments en <b>display:block </b>(et apparentés). 
+				   et indiquent la marge de "vide" que tu veux ajouter autour.
+				</p>
+				<strong style="color:#660066">&#9193;&nbsp; Bref:</strong>
+				<ul type="square">
+					<li><b style="color:#990066">left</b>: s'applique aux éléments en <b style="color:#990066">position: absolute</b> </li>
+					<li><b style="color:#990066">left</b>: s'applique aux éléments en <b style="color:#990066">position: fixed</b><br><br> </li>
+					<li><b style="color:#990066">margin-left</b>: s'applique aux elts en <b style="color:#990066">position: relative</b></li>
+					<li><b style="color:#990066">margin-left</b>: s'applique aux elts en <b style="color:#990066">float: left</b></li>
+				</ul>
+			</div>
+		</div>
+		<div class="colone-laterale" id="CLD" ><!-- top: 250px; -->
+			<p class="paragraphe">
+				&#9203; Début:20h<br>
+				&#8987; Fin HTML: 20h10<br>
+				&#8987; Fin CSS et test:21h05 <br>				
+				&#9200; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer" >
+		<table class="footer-table" >
+		    <tr>
+				<td class="footer-td" style="width:20%;">
+					<span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+					&emsp;&bull; offsetTop<br>
+					&emsp;&bull; pageYOffset<br>
+					<span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+					&emsp;&bull; classList.add();<br>
+					&emsp;&bull; classList.toggle();		 
+				</td>			 
+				<td class="footer-td" style="width:40%;" >
+					<object id="cible" data="img/z4.png"  class="img"   ></object>
+					<section class="container" style="margin-bottom:0.5em; " >
+						<nav class="pagination"  style=" margin-bottom:0;" >
+							<a href="#" class="prev">&laquo;</a>
+							<a id="projet21"  href="#">1</a>
+							<a id="projet22"  href="#">2</a> <!-- id="projet2.2" <= javascript refuse cette notation -->
+							<a id="projet23"  href="#">3</a>
+							<a id="projet24"  href="#">4</a>
+							<span>5</span>
+							<a href="#" class="next">&raquo;</a>
+						</nav>
+						<nav class="pagination pagination-blue"  style="margin-bottom:0;">
+						  <a href="#" class="prev">&laquo;</a>
+						  <a id="td7un" href="#">1</a>
+						  <a href="#">2</a>
+						  <a href="#">3</a>
+						  <span>4</span>
+						  <a href="#">5</a>
+						  <a href="#" class="next">&raquo;</a>
+						</nav>
+					</section>
+				</td>
+				<td class="footer-td" style="width:20%;" >
+					<span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+					&emsp;&bull; offsetTop<br>
+					&emsp;&bull; pageYOffset<br>
+					<span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+					&emsp;&bull; classList.add("newClassName");<br>
+					&emsp;&bull; classList.toggle("newClassName");		 
+				</td>		
+		    </tr>
+		</table>
+	</div><!-- #footer -->
+	<!-- sticky -->
+	<script>
+	  	window.onscroll = function(){ remonter() };
+
+		var menu = document.getElementById("menu");
+
+        var CLG = document.getElementById("CLG"); 
+        var CC = document.getElementById("CC");
+        var CLD = document.getElementById("CLD");		
+
+
+		function remonter() {
+		  if (window.pageYOffset > menu.offsetTop){
+			menu.classList.add("stickyMenu");
+			CLG.classList.add("stickyCLG");
+			CC.classList.add("stickyCC");
+			CLD.classList.add("stickyCLD");
+		  } else {
+			menu.classList.remove("stickyMenu");
+			CLG.classList.remove("stickyCLG");
+			CC.classList.remove("stickyCC");
+			CLD.classList.remove("stickyCLD");
+		  }
+		}
+	</script>
+</body>
+</html>

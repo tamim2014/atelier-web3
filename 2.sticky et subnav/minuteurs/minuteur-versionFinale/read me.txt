@@ -1,0 +1,6 @@
+Probleme non resolu: 
+Arrêt du compteur ( non pas sur une condition mais sur un evenement)?
+
+Probleme resolu! 
+
+Solution: clearInterval(...);

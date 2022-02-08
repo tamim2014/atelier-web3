@@ -1,0 +1,175 @@
+
+/** 
+* On prend le collapsed sidebar comme un enveloppe
+* où on glisse la page ( dans la balise main )
+* c'est tout 
+*/
+
+body {  font-family: "Lato", sans-serif; }
+
+/***** Fixed sidebar, full height *******/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 64px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+/* Style the sidebar links and the dropdown button */
+
+.sidebar a, .dropdownBtn {
+  display: block; /* Alignement Horizontal des liens */
+  width: 100%;
+  /*
+  padding: 8px 8px 8px 32px; 
+  */
+  padding: 8px 8px 8px 0px; 
+  font-size: 25px;
+
+
+  
+  text-decoration: none; 
+  text-align: left;
+  color: #818181; 
+  transition: 0.3s;
+  
+  /* pour les bouton */
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;  
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right:8px; 
+}
+
+
+/* On mouse-over */
+
+.sidebar a:hover, .dropdownBtn:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.closebtn { left:4.6em; }
+
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-top:0;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+ padding: 8px; /* padding: 16px; */
+ transition: margin-left .5s;  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #666;
+  color: #f7f7f9;
+}
+
+
+/******* Cette fois on l'ouvre en javascript ( et non en CSS ) ****/
+
+/* Dropdown container (hidden by default). 
+ * Optional: add a lighter background color and some left padding 
+ * to change the design of the dropdown content 
+ */
+ 
+.dropdownContainer {
+  display: none;
+  background-color: #262626;
+  /* padding-left: 8px; */
+  padding-left: 16px;
+}
+
+
+/* quelques détails personalisables */
+ .dropdown-content { background:#ccf; }
+ #menu .dropdown-content a:hover { background:whitesmoke; }
+.logo{
+  font-size: 18px;
+  padding:0 -5em ;
+  margin-left:0.5em;
+  margin-top:0;
+ 
+  display:inline;
+  font-weight:lighter;
+  text-align:center;
+  font-family:Arial, Helvetica, sans-serif;
+  box-shadow:0px 0px 12px #888;
+  -moz-box-shadow: 0px 10px 2px #888;  
+  -webkit-box-shadow: 0px 10px 2px #888; 
+  /* ROUGE */
+  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+  color: #dd0000;
+  
+ /* VERT 
+  text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+  color: #090; 
+  */
+  border-radius:0 99px 0 33px ;	
+  /* background:#8c8b81;*/	
+   background:#666;
+
+}
+
+.titre{ 
+   padding:1.2em; 
+  margin-top:2em;  
+   
+
+
+      
+  box-shadow:
+  0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+  0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #8c8b8b;
+  border-radius: 4px;
+  text-align: center;
+  background: #f7f7f9; 
+  color:#555;
+  
+  /* comment centrer le titre ?*/ 
+   display:block;
+  float: none;
+  
+  margin-left:auto; 
+  margin-right:auto;
+   width:50%;              
+}

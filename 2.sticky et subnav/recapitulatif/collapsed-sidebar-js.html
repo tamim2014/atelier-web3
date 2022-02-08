@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Barre laterale : JS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 100px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 8px 8px 32px;
+  
+  font-size: 25px;
+  text-decoration: none; 
+  color: #818181; 
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  
+  width:100%; 
+  text-align:left; 
+  margin-top:0;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  padding: 16px;
+  transition: margin-left .5s;  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body onload="openNav();">
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../dropdown-sidenav.html" class="openbtn" style="text-decoration:none;">
+    <i class="fa fa-home" style="font-size:24px;  "></i>  
+  </a> 
+  <a href="collapsed-sidebar-html.html">HTML</a>
+  <a href="collapsed-sidebar-css.html">CSS</a>
+  <a href="collapsed-sidebar-js.html">javaScript</a>
+  <a href="collapsed-sidebar.html">Recapitulatif</a>   
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()" >☰ Open Sidebar </button><br><br>
+  <h2>Sidebar Collapsed: JS </h2>
+  
+   <img src="img/barre-js1.png" class="img" style="height:auto">
+   <img src="img/barre-js2.png" class="img" style="height:auto">
+   <img src="img/barre-js3.png" class="img" style="height:auto">
+      <p class="img" style="background: #f7f7f9; line-height:1.5;">
+      <b><u> Remarque </u> </b><br>
+	  En javascript on écrit <b style="color:green">marginLeft</b> et non <b style="color:red">margin-left</b>
+
+   </p>
+  
+   
+</div>
+
+
+
+<script>
+
+var barre = document.getElementById("mySidebar");
+var main = document.getElementById("main")
+
+function openNav() {
+  barre.style.width = "250px";
+  main.style.marginLeft = "250px";
+}
+
+function closeNav() {
+  barre.style.width = "0";
+  main.style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 

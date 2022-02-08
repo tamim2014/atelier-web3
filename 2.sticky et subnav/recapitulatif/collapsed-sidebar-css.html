@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Barre laterale : CSS </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 100px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 8px 8px 32px;
+  
+  font-size: 25px;
+  text-decoration: none; 
+  color: #818181; 
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  
+  width:100%; 
+  text-align:left; 
+  margin-top:0;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  padding: 16px;
+  transition: margin-left .5s;  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body onload="openNav();" >
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../dropdown-sidenav.html" class="openbtn" style="text-decoration:none;">
+    <i class="fa fa-home" style="font-size:24px;  "></i>  
+  </a> 
+  <a href="collapsed-sidebar-html.html">HTML</a>
+  <a href="collapsed-sidebar-css.html">CSS</a>
+  <a href="collapsed-sidebar-js.html">javaScript</a>
+  <a href="collapsed-sidebar.html">Recapitulatif</a>   
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()" >☰ Open Sidebar </button><br><br>
+  <h2>Sidebar Collapsed: CSS </h2>
+  On a 4 éléments à gerer:
+  <ul type="square">
+    <li>La barre laterale:&emsp; <b style="color:#99cc00"> #mySidebar</b></li>
+	<li>Le contenu:&emsp; <b style="color:#99cc00"> #main</b></li>
+	<li>Le <b style="color:#990033">bouton</b> d'ouverture de la barre laterale:&emsp; <b style="color:#99cc00"> .openNav</b></li>
+	<li>Le <b style="color:#990033">lien</b> de fermeture de la barre latérale:&emsp; <b style="color:#99cc00"> .closeNav </b></li>
+  </ul>
+  
+
+
+   <img src="img/barre-css1.png" class="img" style="height:auto">
+   <img src="img/barre-css2.png" class="img" style="height:auto">
+   <p class="img" style="background: #f7f7f9; line-height:1.5;">
+    <b><u> Remarque</u>: </b><br>
+	On peut temporiser une proprieté<br>
+	<strong><code><b style="color:#990033">transition:</b> margin-left .5s;  </code></strong>
+   </p>
+   <img src="img/.openNav.png" class="img" style="height:auto">
+   <img src="img/barre-css3.png" class="img" style="height:auto">
+   <p class="img" style="background: #f7f7f9; line-height:1.5;">
+      <b><u> Pourquoi <strong style="color:#33ccff">dispaly:block</strong> ?</u>: </b><br>
+	  <code style="background:#ddd"><b style="color:red">&lt;button</b> class="<b style="color:green">openbtn</b>" onclick="openNav()"<b style="color:red">></b> ☰ Open Sidebar <b style="color:red">&lt;/button></b></code><br>
+	  &bull; La propriété width permet de définir la largeur de la boîte du contenu d'un élément.<br>
+	  &bull; <b style="color:green">&lt;button></b> n'est pas une boite. c'est un élément <b style="color:#33ccff">inline</b><br>
+	  &rArr; pour lui appliquer une largeur(width:98%) il doit être <b style="color:#33ccff">block</b>
+   </p>
+   <img src="img/.closebtn.png" class="img" style="height:auto">
+   <img src="img/barre-css4.png" class="img" style="height:auto">
+   <p class="img" style="background: #f7f7f9; line-height:1.5;">
+      <b><u> Pourquoi <strong style="color:#33ccff">position:absolute</strong> ?</u>: </b><br>
+	  <code style="background:#ddd">
+	  &lt;div id="mySidebar" class="sidebar"><br>
+         &emsp;&lt;a href="javascript:void(0)" class="<b style="color:green">closeNav</b>" onclick="closeNav()">×&lt;/a><br>
+	       &emsp;&emsp;...<br>
+      &lt;/div><br>
+	  </code>
+	  La position width permet de placer un élément par rapport à son conteneur.<br>
+	  &rArr; <strong style="color:#33ccff">position:absolute</strong> permet de placer le bouton comme on veut à l'intérieur de la barre latérale<br>
+   </p>
+   
+</div>
+
+
+
+<script>
+
+var barre = document.getElementById("mySidebar");
+var main = document.getElementById("main")
+
+function openNav() {
+  barre.style.width = "250px";
+  main.style.marginLeft = "250px";
+}
+
+function closeNav() {
+  barre.style.width = "0";
+  main.style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 

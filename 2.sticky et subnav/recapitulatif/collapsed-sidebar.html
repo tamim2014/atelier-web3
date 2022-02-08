@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Barre laterale </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 100px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 8px 8px 32px;
+  
+  font-size: 25px;
+  text-decoration: none; 
+  color: #818181; 
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  
+  width:100%; 
+  text-align:left; 
+  margin-top:0;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  padding: 16px;
+  transition: margin-left .5s;  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+img{ 
+
+  width:60%;
+  height: 100%;
+  padding:0; 
+  margin:0;
+
+  box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  border:1px solid #8c8b8b; 
+  border-radius: 4px; 
+  background: #555;		  
+}
+
+
+.img { border-radius: 4px; }
+
+/*************************************************************************/
+
+
+table {
+   width:98%;
+   border:1px solid #8c8b8b;
+   background:#555;
+   margin-bottom:1em;
+   padding-top:2em;
+}
+
+.titre-cellule{
+    padding-top:0;
+	padding-bottom:0.5em;
+    color:#ECECEA;
+    font-weight:bold;
+    text-align:center; 	
+}
+
+
+.titre-section { 
+    width:92% !important;
+    background: #f7f7f9 !important; 	
+}
+
+
+/* table1 */
+
+.tab1{
+   height:auto;
+   width:94%;
+   margin-bottom:0.5em;   
+}
+
+.tab1colone1{ 
+height:23em;
+  width:88%;
+  margin-bottom:0;
+}
+.tab1colone2{
+  height:5em;
+  width:88%;  
+  margin-bottom:4em;   
+}
+
+/* table2 */
+
+.tab2{
+  height:9em;
+  width:92%; "
+}
+.tab2ligne3{
+  height:23em; 
+  width:88%; 
+  margin-bottom:0;
+}
+.tab2ligne4{
+  padding:1em 3.3em; 
+  color:#ECECEA; 
+  font-weight:bold;"
+}
+.tab2ligne5{
+  height:auto;
+  width:92%;
+  margin-bottom:4em;"
+}
+
+/* table3 */
+
+.tab3{
+  height:7em;
+  width:92%; 
+}
+.tab3ligne3{
+  height:23em;
+  width:88%; 
+  margin-bottom:0;
+}
+.tab3ligne4{
+    padding:1em 1.8em;
+	color:#ECECEA;
+	font-weight:bold;
+}
+.tab3ligne5{
+   height:24em; 
+   width:92%;
+   margin-bottom:4em;
+}
+
+.conclusion{
+  height:10em;
+  width:92.5%;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body onload="openNav();">
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../dropdown-sidenav.html" class="openbtn" style="text-decoration:none;">
+    <i class="fa fa-home" style="font-size:24px;  "></i>  
+  </a> 
+  <a href="collapsed-sidebar-html.html">HTML</a>
+  <a href="collapsed-sidebar-css.html">CSS</a>
+  <a href="collapsed-sidebar-js.html">javaScript</a>
+  <a href="collapsed-sidebar.html">Recapitulatif</a>  
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()" >☰ Open Sidebar </button><br><br>
+  <h1>Sidebar Collapsed </h1>
+  
+   <h2>Construction de la barre latérale</h2>
+   <p class="img" style="background: #f7f7f9; width:92%;">1. Zoning</p>
+   <p>Structre HTML et Style des 2 blocs( barre laterale et contenu)</p>
+   <div style=" background-color:red; margin:0;" >
+      <div style="float:left; width:45%; margin-right:0.88em;">
+         <img src="img/collapsed1.png" class="img" style="height:20em;  margin-bottom:0; border-radius:4px 4px 0px 4px;  display:block; float:none;  ">  
+	     <img src="img/collapsed3.png" class="img" style="height:7.5em;  margin-top:0; border-radius:4px 0px 4px 4px; display:block; float:none; ">
+	  </div>
+	  <img src="img/collapsed2.png" class="img" style="height:30em; width:45%; margin-left:0;  ">  
+   </div>
+
+   
+   <p class="img titre-section" >2. Bouton d'Ouverture de la barre laterale</p>  
+   <table  style="padding-right:1em;">
+	 <tr>
+	    <td colspan="2" > <img src="img/collapsed4.png" class="img tab1" ></td>
+	 </tr>
+	 <tr >
+	    <td class="titre-cellule">&Eacute;tape1</td>
+		<td class="titre-cellule">&Eacute;tape2</td>
+	 </tr>
+	 <tr>
+	    <td >
+		   <img src="img/collapsed5.png" class="img tab1colone1">
+		   <img src="img/collapsed6.png" class="img tab1colone2"  >
+		</td>
+		<td>
+		   <img src="img/collapsed7.png" class="img tab1colone1" >
+		   <img src="img/collapsed8.png" class="img tab1colone2" >
+		</td>
+	</tr>
+   </table>
+
+   
+   <p class="img titre-section">3. Ouverture de la barre laterale</p>    
+   <table >	  
+	 <tr>
+	    <td colspan="2" > <img src="img/collapsed11.png" class="img tab2"></td>
+	 </tr>
+	 <tr >
+	    <td class="titre-cellule">Style de la barre</td>
+		<td class="titre-cellule">Style du contenu</td>
+	 </tr> 	  
+	 <tr>
+	     <td >
+		    <img src="img/collapsed12.1.png" class="img tab2ligne3" >
+		 </td>
+		 <td>
+		    <img src="img/collapsed12.2.png" class="img tab2ligne3" >
+		</td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" class="tab2ligne4" > Script d'ouverture: fonction openNav()</td>
+	 </tr>
+	  <tr>
+	     <td colspan="2" > <img src="img/collapsed13.png" class="img tab2ligne5" ></td>
+	  </tr>
+   </table>
+
+   
+   <p class="img titre-section">4. Fermeture de la barre laterale</p>  
+   <table >	 	  
+	 <tr>
+	    <td colspan="2" > <img src="img/collapsed21.png" class="img tab3" ></td>
+	 </tr>
+	 <tr >
+	    <td class="titre-cellule">Bouton de fermeture</td>
+		<td class="titre-cellule" >Script de fermeture: fonction closeNav()</td>
+	 </tr> 		  
+	 <tr>
+	    <td >
+		    <img src="img/collapsed22.png" class="img tab3ligne3" >
+		</td>
+		<td>
+		    <img src="img/collapsed23.png" class="img tab3ligne3" >
+		</td>
+	  </tr>
+	  <tr>
+	     <td colspan="2" class="tab3ligne4" > Factorisation du code: Variables golobales dans le script</td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" > <img src="img/variables-globales.png" class="img tab3ligne5" ></td>
+	  </tr>
+   </table>
+   <p class="img titre-section">Conclusion</p>
+   <img src="#" class="img conclusion" >
+</div>
+
+<script>
+	var barre = document.getElementById("mySidebar");
+	var main = document.getElementById("main")
+
+	function openNav() {
+	  barre.style.width = "250px";
+	  main.style.marginLeft = "250px";
+	}
+
+	function closeNav() {
+	  barre.style.width = "0";
+	  main.style.marginLeft= "0";
+	}
+</script>
+   
+</body>
+</html> 

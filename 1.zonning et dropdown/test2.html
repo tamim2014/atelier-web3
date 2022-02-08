@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{box-sizing: border-box;}
+		body{margin:0; background-color: whitesmoke;}
+		/****************** ZONNING ***************************/
+		#entete{height: 200px; background-color: #555;}
+		#footer{height: 100px; background-color: #555;}
+		#menu{height:48px; background-color: #c4c4c4;}
+		#menu a, #menu .dropdown .dropdown-btn{float:left; padding: 14px 16px; text-decoration:none; font-size:17px;}
+		#menu a:hover, #menu .dropdown .dropdown-btn:hover{background-color: #ccf;}
+
+		.colone-laterale, .colone-contenu { 
+			background-color: ECECEA; 
+			height: 400px; 
+			padding:2em; 
+			
+		}
+		.colone-laterale{width: 25%; margin:0; border:none; float:left;}
+		.colone-contenu{width: 50%; margin:0;  float:left;}
+		.paragraphe{ border: 1px solid #8c8b8b; padding:0.5em; border-radius:2px;}
+
+		/****************** DropDomn ***************************/
+		.dopdown {
+		    float:left;
+			overflow: hidden;
+		 }
+
+		.dropdown .dropdown-btn{
+			border:none;
+			outline: none;
+			margin:0;
+		}
+		  .dropdown-content{
+		    /*  position:relative; left:205px; top:45px;  max-width: 120px; */
+			/*  position:absolute; left:205px; top:245px; min-width:160px ;  */
+			
+			/* position:relative; margin-left:205px; top:45px; max-width:120px;/* ici margin-top impossible( il decale tout le menu): POURQUOI ? */
+			/* position:absolute; margin-left:205px; margin-top:45px; min-width:160px ; */
+			
+		    /* position:absolute; margin-left:12.8em; margin-top:2.8em; min-width:160px ; */
+			   position:absolute; left:13.3em;        top:15.5em;      min-width:160px ;
+					
+			background-color: #f9f9f9;
+	        box-shadow: 0px 8px 16px 0px #ccf;
+						
+			display: none;
+		}
+
+		.dropdown:hover .dropdown-content{
+          display:block;
+		}
+		#menu  .dropdown-content a{
+			display: block;
+			float: none;
+			
+			
+		}
+
+
+
+		
+	</style>
+</head>
+<body>
+	<div id="entete"> </div>
+	<div id="menu">
+		<a href="#" style="background:#111; color:#ECECEA;">Accueil</a>
+		<a href="#">item2</a>
+		<a href="#">item3</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="#">Link1</a>
+				<a href="#">Link2</a>
+				<a href="#">Link3</a>
+			</div>
+
+		</div>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale">
+			<p  class="paragraphe">
+				  8mn pour la structure HTML<br>début:13h41<br>fin:13h49
+			</p>
+		</div>
+		<div class="colone-contenu">
+		 <p  class="paragraphe">
+			Début CSS html: 13h:50<br> Fin CSS html:14h02<br>
+			Début CSS drpdon: 14h:03<br> Fin CSS html:14h12<br>
+		</p>
+		</div>
+		<div class="colone-laterale">
+			<p  class="paragraphe">
+				Début test: 14h12 <br> Fin test:?
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer"></div>
+</body>
+</html>

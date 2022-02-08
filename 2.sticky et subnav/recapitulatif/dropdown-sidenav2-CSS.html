@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<style>
+body {  font-family: "Lato", sans-serif; }
+ 
+
+
+/*-------------- Fixed sidenav, full height ------------------*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 64px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+
+/*------------- Sidenav links and  dropdown button -------*/
+
+.sidebar a, .dropdownBtn {
+
+  display: block; /* Alignement Vertical */
+  
+  padding: 6px 8px 6px 16px; 
+  font-size: 20px;
+  text-decoration: none;
+  color: #818181; 
+  
+  /* BOUTON */
+  border: none;
+  outline: none;
+  background: none; 
+  text-align: left;
+  width: 100%;  /* icon btn à droite */ 
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/*------------------ Dropdown container (hidden by default) -------------*/
+/* Optional:
+ * add a lighter background color and some left padding to 
+ *change the design of the dropdown content 
+ */
+
+.dropdownContainer {
+  display: none;
+  
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+
+/*-------------- On mouse-over ----------------------------------------*/
+
+.sidebar a:hover, .dropdownBtn:hover {
+  color: #f1f1f1;
+}
+
+/* On mouse-over */
+
+.sidebar a:hover, .dropdownBtn:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.closebtn { left:2.8em; }
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
+
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+small{font-size:0.5em; color:#660066;}
+img { height:auto; }
+
+
+
+</style>
+</head>
+<body onload="openNav();" >
+
+
+
+<div id="mySidebar" class="sidebar">
+  <!-- <a href="javascript:history.back()" class="closebtn" > -->
+  <a href="../dropdown-sidenav.html" class="closebtn">
+   <i class="fa fa-arrow-circle-left" style="font-size:24px; color:#ECECEA;"></i>
+  </a>  
+  <!-- Bouton déroulant 1 -->
+  <button class="dropdownBtn"> Sidebar collapsed <!-- <i class="fa fa-caret-down"></i> --> </button> 
+  <div class="dropdownContainer">
+    <a href="collapsed-sidebar-html.html">HTML</a>
+    <a href="collapsed-sidebar-css.html">CSS</a>
+	<a href="collapsed-sidebar-js.html">javaScript</a>
+	<a href="collapsed-sidebar.html">Recapitulatif</a>
+  </div> 
+  <!-- Bouton déroulant 2 -->
+  <button class="dropdownBtn">  Sidebar dropdown  <!-- <i class="fa fa-caret-down"></i> -->   </button> 
+  <div class="dropdownContainer">
+    <a href="dropdown-sidenav2-HTML.html">HTML</a>
+	<a href="dropdown-sidenav2-CSS.html">CSS</a>
+	<a href="dropdown-sidenav2-JAVASCRIPT.html">javaScript</a>
+	<a href="dropdown-sidenav2.html">Recapitulatif</a>
+  </div> 
+  <!-- Menu responsive avec bouton déroulant -->
+  <a href="responsive.html">Responsive Topnav</a>
+</div>
+
+
+
+
+
+
+
+<div class="main">
+  <h1>Sidebar dropdown </h2>
+
+  <h2>Liste déroulante dans la barre latérale</h2>
+	
+  <p class="img" style="background: #f7f7f9; width:94%">2. CSS</p>
+  <p>Fixed sidenav, full height</p>
+  <img src="img/sidenav.png" class="img" style="height:auto">
+  <p>Sidenav links and  dropdown button</p>
+  <img src="img/link.png" class="img" style="height:auto">
+  <p>Dropdown container(hidden by default)</p>
+  <img src="img/dropdown-container.png" class="img" style="height:auto">  
+  <p>Main content</p>
+  <img src="img/main.png" class="img"  style="height:auto">
+  <p>Some media queries for responsivenes</p>
+  <img src="img/mediaQuery.png" class="img"  style="height:auto">
+ 
+  
+</div><!-- #main -->
+
+<script>
+/* Loop through all dropdown buttons
+ * to toggle(between hiding and showing)its dropdown content 
+ * This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdownBtn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+
+  dropdown[i].addEventListener("click", function() {
+	  this.classList.toggle("active");
+	  
+	  var dropdownContent = this.nextElementSibling;
+	  
+	  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+	  } else {
+		  dropdownContent.style.display = "block";
+	  }
+  });
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+</script>
+
+</body>
+</html> 

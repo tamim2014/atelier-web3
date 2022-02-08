@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- icon  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/test3-zoning.css" >
+<link rel="stylesheet" href="css/test3-dropdown.css">
+
+<style>
+/** 
+* On prend le collapsed sidebar comme un enveloppe
+* où on glisse la page ( dans la balise main )
+* c'est tout 
+*/
+
+body {  font-family: "Lato", sans-serif; }
+
+/***** Fixed sidebar, full height *******/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+
+  padding-top: 64px;
+  overflow-x: hidden;
+  background-color: #111;  
+  transition: 0.5s;
+  z-index: 1;
+}
+
+/* Style the sidebar links and the dropdown button */
+
+.sidebar a, .dropdownBtn {
+  display: block; /* Alignement Horizontal des liens */
+  width: 100%;
+ 
+  padding: 8px 8px 8px 0px; 
+  font-size: 25px;
+  
+  text-decoration: none; 
+  text-align: left;
+  color: #818181; 
+  transition: 0.3s;
+  
+  /* pour les bouton */
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;  
+}
+
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right:8px; 
+}
+
+
+/* On mouse-over */
+
+.sidebar a:hover, .dropdownBtn:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+ .closebtn { left:4.6em; }
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+ padding: 8px; /* padding: 16px; */
+ transition: margin-left .5s;  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  /*
+  background-color: #666;
+  color: #f7f7f9;
+  */
+  background-color: green;
+  color: white;
+}
+
+
+/******* Cette fois on l'ouvre en javascript ( et non en CSS ) ****/
+
+/* Dropdown container (hidden by default). 
+ * Optional: add a lighter background color and some left padding 
+ * to change the design of the dropdown content 
+ */
+ 
+.dropdownContainer {
+  display: none;
+  background-color: #262626;
+  /* padding-left: 8px; */
+  padding-left: 16px;
+}
+
+.colone-laterale, .colone-contenu {
+  width:33.33%;
+}
+
+
+/* quelques détails personalisables */
+ .dropdown-content { background:#ccf; }
+ #menu .dropdown-content a:hover { background:whitesmoke; }
+
+  /* .zoom{cursor: zoom-in;} */
+  .zoom:hover { 
+     position:absolute; 
+	 right:-3.4em; 
+	 margin-top:0; 
+	 border-radius:10px; 
+	 z-index:99; 
+	 cursor:grab;
+	 transition:5s;
+	 }
+	 
+ #contenu .ColonesDeCode img, #contenu .ColonesDeCode .paragraphe {
+    width:99%; 
+	margin-left:auto;
+	
+ }
+ #contenu .ColonesDeCode img{
+   /* padding:0.8em; */
+   padding:0; 
+ }
+
+</style>
+</head>
+<body onload="openNav();" >
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="zoning/index-dropdown.html">Zoning</a>
+  <a href="recapitulatif/collapsed-sidebar-html.html">Sidebar collapsed</a>
+  <a href="recapitulatif/dropdown-sidenav2-HTML.html">Sidebar dropdown</a>
+  <!-- Boutons déroulant -->
+  <button class="dropdownBtn"> 
+      Recapitulatif<i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdownContainer">
+    <a href="recapitulatif/dropdown-sidenav2.html">Plein écran</a>
+    <a href="#">Link 2</a>
+  </div> 
+  <button class="dropdownBtn"> 
+      Autre sujet<i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdownContainer">
+    <a href="#">Responsive Topnav</a>
+    <a href="#">autre lien</a>
+  </div> 
+
+</div>
+
+<div id="main"> <!-- ici INTEGRATION CONTENU -->  
+    <div id="entete" style="height:300px">
+	  	<p onclick="openNav()" class="openbtn " style="margin-bottom:4px; margin-top:0px;"> ☰ <span style="float:right"> Dropdown dans un sidenav  </span></p>	
+		<span class="logo">الله ممّا نفعنا بما علّمتنا</span><br>
+		<div class="paragraphe">
+			<p style="padding-left:1em; color:#c4c4c4;"><code>
+				function openNav() { <br>
+					&emsp;document.getElementById("mySidebar").style.width = "250px";<br>
+					&emsp;document.getElementById("main").style.marginLeft = "250px";<br>
+				}<br>		
+			</code></p>
+			<p style="padding-left:1em; color:#c4c4c4;"><code>
+				function closeNav() { <br>
+					  &emsp;document.getElementById("mySidebar").style.width = "0";<br>
+					  &emsp;document.getElementById("main").style.marginLeft = "0";<br>
+				}<br>		
+			</code></p>
+		</div>
+		
+
+	</div>
+	   <div id="menu">
+			<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+			<!-- <a href="dropdown.html"> Dropdown </a> -->
+			<div class="dropdown">
+				<button class="dropdown-btn" >Dropdown</button>
+				<div class="dropdown-content">
+					<a href="dropdown.html">Exemple</a>
+					<a href="#">rien</a>
+					<a href="#">rien</a>					
+				</div>
+			</div>
+			<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+			<div class="dropdown">
+				<button class="dropdown-btn" >Subnav</button>
+				<div class="dropdown-content">
+					<a href="dropdown-subnav.html">Exemple</a>
+					<a href="#">rien</a>				
+				</div>
+			</div>			
+		    <a href="#" onclick="openNav()"> Dropdown-sidenav</a>			
+			<div class="dropdown">
+				<button class="dropdown-btn">Fixed</button>
+				<div class="dropdown-content">
+					<a href="fixed-navbar.html">Fixed navbar</a>
+					<a href="fixed-sidebar.html">Fixed sidebar</a>
+					<a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-btn">Sticky</button>
+				<div class="dropdown-content">
+					<a href="sticky-navbar.html">Sticky navbar</a>
+					<a href="sticky-sidebar.html">Sticky sidebar</a>
+					<a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>						
+				</div>
+			</div>
+		    <a href="interfaces-js.html" >Interfaces js</a>
+	    </div><!-- #menu-->
+	
+	<div id="contenu" class=""> <!-- class="img" -->
+		<div class="colone-laterale ColonesDeCode">
+		    <h4 class="grosTitreBlanc"  ><span class="box-shadow-titre-blanc" >HTML</span></h4>
+			<p class="paragraphe"  >
+			    <span style="color:#f7f7f9">&#9724; 1 barre laterale</span> <br>
+				<span style="color:#CC6600">&#9724; 1 bloc contenu </span> <br>
+				<span style="color:#f7f7f9">&#9724; C'est tout</span><br>
+			</p>
+			<img src="img/barre.png" class="zoom" >
+			<!-- <img src="img/contenu.png" style="cursor:not-allowed;" > -->
+		</div>
+		<div class="colone-contenu  ColonesDeCode"  >
+		    <h4 class="grosTitreBlanc"  ><span class="box-shadow-titre-blanc" >CSS</span></h4>
+            <p class="paragraphe" >
+			    <span style="color:#f7f7f9">&#9724; .dropdown-btn</span> <br>
+				<span style="color:#CC6600">&#9724; .dropdown-container</span> <br>
+				<span style="color:#f7f7f9">&#9724; pas de .dropdown</span> <span style="background:#ff1; font-size:0.9em; color:black; padding:0; border-radius:2px;"> &#9888;</span> <br>
+			</p>
+			<img src="img/sidenav2.png" class="zoom" >
+			<img src="img/link.png" class="zoom" >
+			<img src="img/linkhover.png" class="zoom" >
+			<img src="img/dropdown-container.png" class="zoom" >
+			<img src="img/main.png" class="zoom">
+			<img src="img/mediaQuery.png" class="zoom">			
+		</div>
+		<div class="colone-laterale ColonesDeCode">
+		    <h4 class="grosTitreBlanc"  ><span class="box-shadow-titre-blanc" >javaScrip</span></h4>
+			<p class="paragraphe" >
+			    <span style="color:#f7f7f9">&#9724; listBtn ?</span> <br>
+				<span style="color:#CC6600">&#9724; this ?</span> <br>
+				<span style="color:#f7f7f9">&#9724; blocLiens ?</span><br>				
+			</p>
+			<img src="img/variables.png" class="zoom" >
+			<img src="img/bouton-deroulant.png" class="zoom" style="padding:0;  ">
+			<span class="img" style="padding:0.6em 0.2em; width:100%; height:auto; margin-left:0; " >
+			   <span style="background:#ECECEA;" > <!-- un 2ème span pour l'effet stabilot blanc -->
+			         <span style="color:#115; padding-bottom:2em;">&#9724; listBtn :</span><br> &emsp; Liste des boutons<br>
+				     <span style="color:#CC6600; padding-bottom:2em;">&#9724; this :</span><br> &emsp; Le bouton cliqué<br>
+				     <span style="color:#115">&#9724; blocLiens :</span><br> &emsp; elt suivant le btn cliqué<br>						
+			   </span><!-- stabilo -->
+			</span>
+		</div>
+	</div><!-- #contenu -->
+  
+    <div style="clear:both"></div>  
+	<div id="footer">
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%; ">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();		 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%; font-size:0.8em; line-height:1.5;">
+			    <div class="img" style="background:white; padding-left:0.4em;">
+					En mode Sidenav(barre de navigation verticale ):
+					<ul type="square" style="padding-left:0.8em; ">
+					
+					<li>Le dropdown-btn et le dropdown-container sont <b style ="color:#990033">directement dans le menu</b><br><br>
+					<li>Donc <b style ="color:#990033">PAS</b> de "<u>dropdown père </u>"
+					
+					</ul>
+				 </div>
+	 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();	
+	 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer --> 	
+</div><!-- #main: FIN INTEGRATION CONTENU  -->
+
+<script>
+
+// Ouverture/Fermeture du sidebar
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+// Ouverture/Fermeture des dropdowns à l'interieur du sidebar
+
+/***
+ *  Loop through all dropdown buttons 
+ *  to toggle (between hiding and showing) its dropdown content
+ *  This allows the user to have multiple dropdowns without any conflict
+ */
+ 
+var dropdown = document.getElementsByClassName("dropdownBtn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+	dropdown[i].addEventListener("click", function() {	
+		this.classList.toggle("active");
+		var dropdownContent = this.nextElementSibling;
+		 
+		if (dropdownContent.style.display === "block") {
+			dropdownContent.style.display = "none";
+		} else {
+			dropdownContent.style.display = "block";
+		}
+	});
+}
+
+</script>
+   
+</body>
+</html> 

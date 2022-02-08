@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Alignement vertical des </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="dropdown-menu.css" >
+	<!-- icon  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css-atelier1/zoning.css" > 
+	<link rel="stylesheet" href="css-atelier1/sidebar.css" > 
+	
+
+</head>
+<body onload="openNav();" >
+  <!-- ################################  SIDEBAR  ########################### -->
+	<div id="mySidebar" class="sidebar" >
+		  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a> -->
+		   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a>
+		  <a href="index-dropdown.html">Zoning</a>
+		  <a href="zoning-test1.html">Test1</a>
+		  <a href="zoning-test2.html">Test2</a>
+
+		  <!-- Bouton déroulant -->
+		  <button class="dropdownBtn"> 
+			  Dropdown<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdownContainer">
+			<a href="dropdown.html">Test1</a>
+			<a href="#">rien</a>
+			<a href="#">rien</a>
+		  </div>
+		  <a href="#contact">Search</a>
+	</div>
+	
+	
+   <!-- ################################  MAIN  ########################### -->
+   <div id="main" > <!-- ici INTEGRATION CONTENU --> 
+   
+		<div id="entete">
+		    <p onclick="openNav()" class="openbtn " style="margin-bottom:4px;"> ☰ <span style="float:right"> Index(1er atelier et tests): zoning et dropdown  </span></p>	
+			<span class="logo">الله ممّا نفعنا بما علّمتنا</span>
+		
+		</div>
+		<div id="menu">
+			<a href="../index.html" class="accueil" style="padding: 10px 16px;"  ><i class="fa fa-home" ></i></a><!-- &#8962; -->  	   
+			<a href="#" >Zoning</a>
+			<a href="dropdown.html" >Dropdown</a>
+			<!-- blème: color diférrent pour l'item Dropdown -->
+			<div class="dropdown " style="color:inherit" >				
+				<button class="dropbtn" style="color:inherit">Les tests &nbsp; <i class="fa fa-caret-down"></i></button>		
+				<div class="dropdown-content">
+					  <a href="zoning-test1.html">Test1</a>
+					  <a href="#">rien</a>
+					  <a href="#">rien</a>
+				</div>				  
+			</div>
+		</div>
+		<div id="contenu" >
+			<!-- Colone1 conenu -->
+			<div class="divH">
+				   <p class="remarque">1. La structure HTML </p>
+				   <img src="img/body.png" style="width:100%; height: 62%;" />
+				   <hr  style="width:100%;"><br><br>
+				   <p class="remarque">DropDown: les 5 fondamentaux </p>
+				   <img src="img/5attributs.png" style="width:100%; height:21%;" />	
+			</div>
+			<!-- Colone2 contenu -->
+			<div class="divH"  >
+				  <p class="remarque">2. La classe <span class="bb">.divH</span></p>
+				  <img src="img/head.png" style="width:100%; height: 62%;" />
+				  <div style="background:#c4c4c4; padding:1em; font-size:0.7em; overflow:hidden;">
+						<div class="idR divList" ><code ><span class="R">Lg10</span></code>&nbsp;&nbsp;Inclu&nbsp;le&nbsp;SizeBorder&nbsp;dans&nbsp;SizeBox</div>
+						<div class="idR divList" ><code ><span class="R">Lg11</span></code>&nbsp;&nbsp;Stabilise&nbsp;le&nbsp;footer</div>
+						<div class="idR divList" ><code ><span class="R">Lg17</span></code>&nbsp;&nbsp;Aligne&nbsp;<span class="bb">dropdown</span>&nbsp;aux&nbsp;items&nbsp;menu</div>
+						<div class="idR divList" ><code ><span class="R">Lg20</span></code>&nbsp;&nbsp;Alignement&nbsp;horizontal&nbsp;des&nbsp;div</div>
+				  </div>		  
+				  <hr  style="width:100%;">			  
+				  <img src="img/4elts.png" style="width:100%; height:21%;" />					 
+			</div>
+			<!-- Colone3 contenu -->
+			<div class="divH" >
+				 <p class="remarque">3. Le dropdown<br></p>
+				 <img src="img/dropdown.png" style="width:100%; height: 62%;" />
+				 <h3><u>Remarques</u>: <small style="color:#990033;">  .dropdown-content</small></h3>
+				 <p class="remarque"><b style="color:#990033;">.dropdown-content{</b> <b class="bb">position:absolute ;</b> <b style="color:#990033;">}</b></p>
+				   &#9314; Pour rester sous le <b style="color:#990033;"><u>.dropdown</u></b> :
+					<ul style="list-style-type:none">
+						<li>&#9193; le <b style="color:#990033;"><u>.dropdown-content</u></b></li>
+						<li>&#9193; doit être <b class="bb">position:absolute ;</b>&emsp; <span style="color:#111; background:#ff1;"> &#9888;</span></li>				
+					</ul>
+				 <p class="remarque"><b style="color:#bf8040;"> a {</b> <b class="bb">display:block ; &nbsp;</b>  <b class="bb"> &nbsp;float:none ; </b><b style="color:#bf8040;">}</b></p>
+				 &#9315; Un "<b class="bb">display:block</b>" permet à des elts &#9760; &nbsp; &#9760; &nbsp; inline<small>(ici <b style="color:#bf8040;"> &lt; a &gt;</b>)</small> de s'aligner verticalement
+				 <ul style="list-style-type:none">
+					<li>&#9193; Il est accompagé d'un "<b class="bb">float:none</b>" </li>
+					<li>&#9193; Sinon l'effet block est annulé<br> &emsp; &emsp; <small>( par un <b>"float:left"</b> par défaut)</small> </li>
+				 </ul>				 
+			</div><!-- #contenu -->		
+		</div>
+		<div  style="clear:both;"></div>
+		<div id="footer" style="z-index:2;"></div>
+		
+</div><!-- #main : FIN INTEGRATION CONTENU -->
+<script type="text/javascript" src="../js/sidebar-et-dropdown.js"></script>
+    
+</body>
+</html>

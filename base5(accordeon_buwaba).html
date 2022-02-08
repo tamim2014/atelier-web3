@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title> New accordeon(buwaba)</title>
+<meta charset="utf-8"/>
+<!--
+  #
+  # Date: 12 Décembre 2018
+  # Recuperation:05 Fév2022
+  #
+  # Application : un accordeon qui se referme tou seul
+  # Commentaire : Ecrit depuis 2016 mais j'ai perdu la main
+  #               à ma grande surprise ce composant n'est pas encore connue(5ans après)
+  #               même chez w3school( ils un accordeon , mais pas dynamique,c'est l'utilisateur qui referme)
+  #                D'où la necessité de le recuperer et l'isoler(pour faciliter son integration - un essai aujourdhui s'est soldé par un KO )
+  #
+ -->
+
+	<style>
+        #aside{
+	         float:left;
+		     width:16%; height:100%;
+		     margin-right:5%;  
+		     text-align:center;
+		     height:500px;
+		     background-color:#E5E5E5;
+	    }
+		ul:hover { list-style-type: none; }
+		ul.navigation {
+		  margin: 0;
+		  padding: 0;
+		  list-style: none;
+		  background: #A4A4A4;
+		  color: #fff;
+		  width: 200px;
+		  font: 1.2em "Trebuchet MS", sans-serif;
+		}
+		.navigation .subMenu {
+		  font-size: .8em;
+		  background: #49505a url(subMenu.png) 0 0 repeat-x;
+		  font-size: .9em;
+		  margin: 0; padding: 0;
+		  border-bottom: 1px solid #666;
+		} 
+		.navigation ul.subMenu a {
+		  background: none;
+		  padding: 3px 20px;
+		}
+		.navigation a:hover, .navigation a:focus, .navigation a:active {
+		  text-decoration: underline;
+		}		
+		a:hover { opacity: .7;   }
+		.navigation a, .navigation span {
+		  display: block;
+		  padding: 4px 10px;
+		  color: #00004d;
+		  text-decoration: none;
+		  background: #D4D7C4; url(menu-item.png) left bottom no-repeat;
+		}
+        .toggleSubMenu .subMenu a{ color:white;}		
+	</style>
+	<script src="moteurJquery.js"> </script><!-- un peu vieux mais il tourne --> 
+    <!-- <script src="menuAccordeonBuwaba.js"></script> -->
+	<script>
+    $(document).ready(function(){
+		$(".navigation ul.subMenu").hide();
+		// On sélectionne tous les items de liste portant la classe "toggleSubMenu" et on remplace l'élément span qu'ils contiennent par un lien 
+		$(".navigation li.toggleSubMenu span").each( function () {
+			// On stocke le contenu du span :
+			var TexteSpan = $(this).text();
+			$(this).replaceWith('<a href="" title="Afficher le sous-menu">' + TexteSpan + '<\/a>') ;
+		} ) ;
+
+		// On modifie l'évènement "click" sur les liens dans les items de liste qui portent la classe "toggleSubMenu" :
+		$(".navigation li.toggleSubMenu > a").click( function () {
+			// Si le sous-menu était déjà ouvert, on le referme :
+			if ($(this).next("ul.subMenu:visible").length != 0) {
+				$(this).next("ul.subMenu").slideUp("normal");
+			}
+			// Si le sous-menu est caché, on ferme les autres et on l'affiche :
+			else {
+				$(".navigation ul.subMenu").slideUp("normal");
+				$(this).next("ul.subMenu").slideDown("normal");
+			}
+			// On empêche le navigateur de suivre le lien :
+			return false;
+		});    
+    });
+	</script>
+
+</head>
+<body>
+   <!-- menu accordeon -->
+   <div id="aside" style="width:14%; margin-right:0;  height:99%; margin-bottom:0;  margin-top:0; padding-top:0; font-size:.8em;" > <!-- appliquer ce style sur base4.css -->
+			<ul class="navigation"  >	<!-- margin-top:-19.5%; pour LES GRAND ECRAN-->
+				<li class="toggleSubMenu"><span>Passeports</span>
+					<ul class="subMenu" id="seulement_les_passeports" style="color:silver;" >
+					  <li id="envoi"><a href="#">Envois</a></li>
+					  <li id="retour"><a href="#" >Retours</a></li>
+					  <li id="distrib_mensuel"><a href="#">Distrib(mensuel)</a></li>
+					  <li id="distrib_annuel"><a href="#">Distrib(annuel)</a></li>
+					  <li id="distrib_tous"><a href="#">Distributions</a></li>
+					</ul>
+				</li>
+				<li class="toggleSubMenu"><span>Recettes Etat civil</span>
+					  <ul class="subMenu" id="seulement_les_recettes" style="color:silver;" >						
+						<li><a href="#">Légalisation</a></li>
+						<li><a href="#">Carte consulaire</a></li>
+						<li><a href="#">Timbres</a></li>
+					  </ul><!-- fin ul.subMenu -->
+				</li>
+				<li class="toggleSubMenu"><span>Caisse</span>
+					  <ul class="subMenu" id="seulement_les_caisses" style="color:silver;" >						
+						<li><a href="#" >taxes</a></li>
+						<li><a href="#" >charges</a></li>
+						<li><a href="#" >recettes</a></li>
+						<li><a href="#" >Journal de caisse</a></li>
+					  </ul>
+				</li>					
+			</ul>  		   
+   </div><!-- fin menu accordeon -->
+</body>
+</html>
+
+
+
+
+

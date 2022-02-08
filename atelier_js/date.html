@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Date</h2>
+
+
+
+<script>
+var jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+var mois=new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+
+var aujourdhui = new Date();
+
+var nomJour = jours[aujourdhui.getDay()];
+var nomMois = mois[aujourdhui.getMonth()]
+// month
+document.writeln("<h3 style=\"color:#007\">Month</h3>");
+
+function leMois() { document.write(nomMois); } 
+leMois();
+
+function annee() { document.write(" "+aujourdhui.getFullYear()); } 
+
+
+
+// nom du jour
+document.writeln("<h3 style=\"color:#007\">Nom du jour</h3>");
+
+
+function leJour() { document.writeln(nomJour); } 
+leJour();
+
+// date du jour
+document.writeln("<h3 style=\"color:#007\">Date du jour</h3>");
+
+function dateJour() { document.writeln(aujourdhui.getDate()); }
+dateJour();
+
+
+// date du complète
+document.writeln("<h3 style=\"color:#007\">Date complète</h3>");
+function dateComplete(){
+  var result = jours[aujourdhui.getDay()] + " " + aujourdhui.getDate() + "/" + (aujourdhui.getMonth()+1) + "/" + aujourdhui.getFullYear();
+  document.writeln(result);
+}
+dateComplete();
+
+// date du complet : le mois en français
+document.writeln("<h3 style=\"color:#007\">Date complete: Le mois en français</h3>");
+
+function dateCompleteFR(){
+ leJour(); 
+ document.writeln(", "); 
+ dateJour(); 
+ leMois();
+ annee();
+}
+dateCompleteFR();
+
+
+
+// heure du jour
+document.writeln("<h3 style=\"color:#007\">Heure</h3>");
+  //var aujourdhui = new Date();
+  var heure = aujourdhui.getHours();
+  var minuite = aujourdhui.getMinutes(); 
+  document.writeln(heure+" h : "+minuite);
+</script>
+
+</body>
+</html>
+
+

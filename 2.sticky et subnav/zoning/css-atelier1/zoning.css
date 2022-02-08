@@ -1,0 +1,112 @@
+	
+*{
+	 box-sizing:border-box; /* inclure les bordures dans la tailles des boites */
+}
+body{
+	 margin:0; /* stabiliser le footer( virer la marge en bas de page */
+	 line-height: 1.5;
+	 background: #ECECEA;
+}
+/******************* EFFETS STRUCTURE( à retenir ) ************************/
+		#entete{ height:200px; background:#555;}
+		#footer{height:100px; background:#555;}			
+		#menu{height:52px; background:#c4c4c4;}
+		#menu a { 
+		    float:left; /* sinon .dropdown se barre à gauche */
+		}
+		.divH {
+			float:left; /* ALIGNEMENT HORIZONTALE - FONDAMENTAL */
+			width:31.31%; 
+			margin:0 1%; 
+			padding:1%; 			
+		}
+
+/******************* EFFETS CONTENU ( à personnaliser) ************************/
+        #menu a { 
+		    padding: 14px 16px;
+		    text-align: center;
+		    text-decoration: none;
+           
+		}
+		.divH {
+			height:100%;
+			border:1px solid #8c8b8b; 
+            background:#FFF;
+			margin-top:1em;			
+            margin-bottom:1em;
+			
+		}
+       .remarque{
+	      outline: 8px ridge #c4c4c4;
+          /* border-radius: 2rem; */
+		  text-align:center;
+		  background:#ddd;
+		  margin-left:0.5em;
+		  margin-right:0.5em;
+	   }
+	
+	   .bb{
+	     color:#32a1ce;
+		 font-weight:bold;
+	   }
+	   .active{
+          background-color: #666;
+		  color: #ECECEA; 
+		}
+		
+		.accueil {background:#111; color:#ECECEA; font-weight:bold; font-size:2em; line-height:0.75;}
+
+/****************** HORS SUJET: Le petit liste qui explique le code CSS ******************/ 
+ 
+       .idR{color:#115; padding:1px 4px; border-radius:3px;border:1px solid #8c8b8b; box-shadow:2px 2px 0.5px 0.5px #8c8b8b;  }
+	   .divList{ border:0;  padding:0; width:20px; height:20px; margin-right:1.1em;  }
+	   code { font-weight: bold; font-style: italic; background-color: #f0f2f2; color:#555; border-radius: 10px 0 0 0;}
+	   .R{color:#990033; font-weight:bold;  }
+	   
+	   .logo{
+		  font-size: 18px;
+		  padding:0 -5em ;
+		  margin-left:0.5em;
+		  margin-top:0;
+		 
+		  display:inline;
+		  font-weight:lighter;
+		  text-align:center;
+		  font-family:Arial, Helvetica, sans-serif;
+		  box-shadow:0px 0px 12px #888;
+		  -moz-box-shadow: 0px 10px 2px #888;  
+		  -webkit-box-shadow: 0px 10px 2px #888; 
+		  /* ROUGE */
+		  text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+		  color: #dd0000;
+          
+         /* VERT 
+          text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+          color: #090; 
+		  */
+          border-radius:0 99px 0 33px ;	
+          /* background:#8c8b81;*/	
+           background:#666;
+    
+		}
+		
+		.titre{ 
+		  padding:1.2em; 
+		  bottom:2em;		  
+		  box-shadow:
+			0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+			0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		  border:1px solid #8c8b8b;
+		  border-radius: 4px;
+		  text-align: center;
+		  background: #555; 
+		  color:#f7f7f9;
+		  
+          /* comment centrer le titre ?*/	
+            display:block;
+			float: none;
+			
+			margin-left:auto; 
+            margin-right:auto;
+            width:50%;		  		 	  
+		}

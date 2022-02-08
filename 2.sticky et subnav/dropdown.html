@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown</title>
+	<link rel="stylesheet" href="css/test3-zoning.css" >
+	<link rel="stylesheet" href="css/test3-dropdown.css">
+	<style>
+	    details { margin:2em; }
+	    .classe{ color:#990033; font-weight:bold; background:white; padding: 0.2em 1em;}
+	
+		/* footer */		
+		.footer-table { padding:1em;}
+		.footer-td { padding:0.4em; background:#8c8b81; height:auto;  margin:auto; width:30%; }
+	</style>
+</head>
+<body>
+
+	<div id="entete"></div>
+	<div id="menu">
+		<a href="index.html" style="background-color: #111; color:#ECECEA;">Accueil</a>
+		<!-- <a href="dropdown.html"> Dropdown </a> -->	
+		<div class="dropdown">
+			<button class="dropdown-btn" >Dropdown</button>
+			<div class="dropdown-content">
+			    <a href="dropdown.html">Exemple</a>
+				<a href="#">rien</a>
+			    <a href="#">rien</a>					
+			</div>
+		</div>
+		<!-- <a href="dropdown-subnav.html"> Subnav </a> -->
+		<div class="dropdown">
+			<button class="dropdown-btn" >Subnav</button>
+			<div class="dropdown-content">
+			    <a href="dropdown-subnav.html">Exemple</a>
+				<a href="#">rien</a>				
+			</div>
+		</div>
+		<a href="dropdown-sidenav.html">Dropdown sidenav</a>
+		<div class="dropdown">
+			<button class="dropdown-btn">Fixed</button>
+			<div class="dropdown-content">			 
+			    <a href="fixed-navbar.html">Fixed navbar</a>
+				<a href="fixed-sidebar.html">Fixed sidebar</a>				
+			    <a href="fixed-navbar.html">Fixed navbar & sidbar</a>						
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdown-btn">Sticky</button>
+			<div class="dropdown-content">
+				<a href="sticky-navbar.html">Sticky navbar</a>
+				<a href="sticky-sidebar.html">Sticky sidebar</a>
+                <a href="sticky-navbar-sidebar.html">Sticky navbar & sidebar</a>						
+			</div>
+		</div>
+		<a href="interfaces-js.html" >Interfaces js</a>
+	</div>
+	<div id="contenu">
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#9200; Durée totale: 55mn
+			</p>
+		</div>
+		<div class="colone-contenu">
+		    <h1 class="grosTitreBlanc" style="margin-bottom:1em"  ><span class="box-shadow-titre-blanc" >Dropdown</span></h1>
+			<p style="margin-left:2em;"> Cliquer sur le summay pour voir la solution CSS </p>
+            <details >
+		        <summary> La structure   <span class="classe">HTML</span> </summary>
+				<img src="img/dropdown-html.png">
+		    </details>
+			
+			<details >
+		        <summary> 1) Le conteneur  <span class="classe">.dropdown</span> </summary>
+				<img src="img/d1.png">
+		    </details>
+			<details >
+		        <summary> 2) Le bouton  <span class="classe">.dropdown-btn</span> </summary>
+				<img src="img/d2.png">
+		    </details>
+			<details >
+		        <summary> 3) Le contenur sous-menu  <span class="classe">.dropdown-content</span> </summary>
+				<img src="img/d3.png">
+		    </details>
+			<details >
+		        <summary> 4) Les <span class="classe">liens [ &lt;a&gt; ... &lt;/a&gt; ]</span> dans le sous-menu </summary>
+				<img src="img/d4.png">
+		    </details>
+			<details >
+		        <summary> 5) Ouverture/Fermeture du sous-menu <span class="classe">( sans script )</span> </summary>
+				<img src="img/d5.png">
+		    </details>
+
+		</div>
+		<div class="colone-laterale">
+			<p class="paragraphe">
+					&#9203; Début:20h<br>
+					&#8987; Fin HTML: 20h10<br>
+					&#8987; Fin CSS et test:21h05 <br>
+				
+					&#8986; Durée totale: 55mn
+			</p>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div id="footer">
+		<table class="footer-table" >
+		  <tr>
+			 <td class="footer-td" style="width:20%;">
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add();<br>
+				 &emsp;&bull; classList.toggle();	 
+			 </td>
+			 
+			 <td class="footer-td" style="width:20%;">
+
+
+				 <span style="color:#f7f7f9;" >&#8718; Problème: </span><br>
+				 
+				 &emsp;&bull; .dropdown-content est un elt block <br>
+				 &emsp;&bull;  donc il retourne à la ligne<br>
+
+				 
+				 <span style="color:#f7f7f9;" >&#8718; Solution:</span><br>
+				 &emsp;&bull; position:absolute <br>
+				 &emsp;&bull; preciser top et left si besoin <br>	 				 
+			 </td>
+
+			 <td class="footer-td" style="width:20%;" >
+				 <span style="color:#f7f7f9;" >&#8718; Proprierés:</span><br>
+				 &emsp;&bull; offsetTop<br>
+				 &emsp;&bull; pageYOffset<br>
+				 <span style="color:#f7f7f9;" >&#8718; Méthodes:</span><br>
+				 &emsp;&bull; classList.add("newClassName");<br>
+				 &emsp;&bull; classList.toggle("newClassName");		 
+			 </td>
+		
+		  </tr>
+		</table>
+	</div><!-- #footer -->
+
+</body>
+</html>
