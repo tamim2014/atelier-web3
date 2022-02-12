@@ -1,0 +1,15 @@
+ à moduler(isoler):
+1)  bibliographie(hoverableDropdownSubnav3) <= la version courante
+2)  bibliographie(hoverableDropdownSubnav2) <= la version au black panel
+
+!!!!! Blie pa de faire un push vers github
+
+INCHA ALLAH
+
+
+
+___________________________________ à plus tard ( Locminé INCHA ALLAH ) _____________________________
+3) rendre timeLine-final responsive
+4) appliquer le format responsive à commentCoran
+    normalement c'est impossible
+    auquel cas: cacher le timeline sur comentCoran en mode responsive
