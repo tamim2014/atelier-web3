@@ -78,7 +78,7 @@ h1 {
   color: white;
 }
 /*********************   Image Overlay Slide ************/
-.container { position: relative; width: 100%;  } 
+.container { position: relative; width: 100%; } 
 .overlay {
   position:absolute; left:0; right:0;  bottom:100%;
   width: 100%; height:0;
@@ -86,8 +86,8 @@ h1 {
   overflow: hidden;
   
 }
-.container:hover .overlay { bottom:0; height:100%; }
-.image {  display:block; width:100%; height: auto; }
+.container:hover .overlay { bottom:0; height:100%;  }
+.image {  display:block; width:100%; height:200px !important; }
 .text {
   color: white; font-size: .7em; text-align: left; 
   position: absolute; top: 40%; left:50%;  /* position: absolute; top: 50%; left: 50%; */
@@ -98,8 +98,15 @@ h1 {
 }
 .text h2  { padding-left:.7em; }
 .text p { padding: 1em; }
-.text ul { padding-left:2em; list-style:square;}
+.text ul { padding-left:2em; padding-bottom:.5em; margin-bottom:0;  list-style:square;}
 .text ul li { padding-bottom:1em;}
+ 
+/* link */
+.lien { float:right; padding:0 1em 0 .5em; text-decoration:none; font-size:2em;}
+
+
+/* !!!!!!!!!!!!!! specifique à cette page: index_bibliographie.html( ne pas importer dans /css ) !!!!!!!!!! */
+b {display:inline !important; }
 
 </style>
 </head>
@@ -111,22 +118,22 @@ h1 {
 <h1>MYLOGO.COM</h1>
 <hr>
 
-<h2>PORTFOLIO</h2>
+<h3>Sources les plus  referencées de da la Sunna</h3>
 
 <div id="myBtnContainer">
-  <button class="btn" onclick="filterSelection('swahaba')">Compagnons</button>
+  <button class="btn active" onclick="filterSelection('swahaba')">Compagnons</button>
   <button class="btn" onclick="filterSelection('imam')"> Imams</button>
   <button class="btn" onclick="filterSelection('muhadith')"> Muhadiths</button>
   <button class="btn" onclick="filterSelection('mufaçir')"> Mufaçir</button>
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
 </div>
 
-<!-- Portfolio Gallery Grid -->
+<!-- Gallery: SWAHABA -->
 <div class="row">
 
   <div class="column swahaba" >
 	<div class="content container" > 
-	    <img src="img/abouhouraira.png" alt="Kaaba" class="image">
+	    <img src="img/abouhouraira.png" alt="Compagnons du Propète &#65018;" class="image">
 		<div class="overlay"  >
 			<div class="text">
 			    <h2>Oeuvres:</h2>
@@ -134,11 +141,12 @@ h1 {
 				     <li><b>Sahîfah Sahîhah</b></li>
 				</ul>
 				<p>
-				   Il avait écrits un grand nombre de livres sur le prophète Mahomet &#65018;, dont nous est parvenue une compilation de 140 récits, qu'il avait donnée à Hammâm ibn Munabbih
+				   Il avait écrits un grand nombre de livres sur le prophète Mahomet &#65018;, dont nous est parvenue une compilation de 140 récits, qu'il avait donnée à Hammâm ibn Munabbih.<br>
+				   <a href="bibliographie.html#abouhouraira"  class="lien" >&#9758;</a>
 				</p>
 			</div>
 		</div>
-        <h5 >Abou Houraira( vers 601 )</h5>
+        <h5 >Abou Houraira ( vers 601 )</h5>
         Maîtres: Le Prohète &#65018;<br>
 		&Eacute;lève: ...
     </div>
@@ -146,7 +154,7 @@ h1 {
   
   <div class="column swahaba">
 	<div class="content container" > 
-	    <img src="img/anas.png" alt="Kaaba" class="image">
+	    <img src="img/anas.png" alt="Compagnons du Propète &#65018; (Anas ibn Mãlik)" class="image">
 		<div class="overlay"  >
 			<div class="text">
 			    <h2>Oeuvres:</h2>
@@ -155,11 +163,14 @@ h1 {
 				     <li>Bataille de Khaybar</li>
 				     <li>Conquête de la Mecque </li>
 				     <li> Bataille de Hunayn</li>
-				     <li>Siège de Ta'if</li>
+				     <li>
+					      Siège de Ta'if <br>
+						  <a href="bibliographie.html#anas"  class="lien" >&#9758;</a>
+					 </li>
 				</ul>
 			</div>
 		</div>
-        <h5>Anas ibn Mãlik( 612 )</h5>
+        <h5>Anas ibn Mãlik ( 612 )</h5>
         Maîtres: Le Prohète &#65018;<br>
 		&Eacute;lève: Imam Abou Hanifa
     </div>
@@ -167,18 +178,21 @@ h1 {
   
   <div class="column swahaba">
 	<div class="content container" > 
-	    <img src="img/ibnAbass2.png" alt="Kaaba" class="image">
+	    <img src="img/ibnAbass2.png" alt="Compagnons du Propète &#65018; (Ibn Abbass)" class="image">
 		<div class="overlay"  >
 			<div class="text">
 			    <h2>Oeuvres:</h2>
 			    <ul>
 				     <li><b>Tafsir Ibn Abbas(Tanwir al-Miqbas)</b></li>
 				</ul>
-				<h2>Lgnée:</h2>
-				<p>La dynastie des Abbassides(750-1258) vient de la descendance d'Ibn Abbas et remplacera la dynastie des Omeyyades(661-750). </p>
+				<h2>Lignée:</h2>
+				<p>
+				   La dynastie des Abbassides(750-1258) vient de la descendance d'Ibn Abbas et remplacera la dynastie des Omeyyades(661-750).<br>
+				   <a href="bibliographie.html#abass"  class="lien" >&#9758;</a>
+				</p>
 			</div>
 		</div>
-        <h5>Ibn Abbass( 619 )</h5>
+        <h5>Ibn Abbass ( 619 )</h5>
         Maîtres: Le Prohète &#65018;<br>
 		&Eacute;lève: Ikrima
     </div>
@@ -187,7 +201,7 @@ h1 {
   
  <div class="column swahaba">
 	<div class="content container" > 
-	    <img src="img/ibnMassound.png" alt="Kaaba" class="image">
+	    <img src="img/ibnMassound.png" alt="Compagnons du Propète &#65018;(Ibn Massound)" class="image">
 		<div class="overlay"  >
 			<div class="text">
 			    <h2 style="padding-top:3em;">Oeuvres:</h2>
@@ -199,60 +213,236 @@ h1 {
 				     <li>Bataille de Uhud,</li>
 				     <li>Conquête de la Mecque.</li>
 				</ul>
-				<p>Il fut le meilleur récitateur du Coran parmi les compagnons du Prophète et le comprenait encore mieux que tous</p>
+				<p>
+				    Il fut le meilleur récitateur du Coran parmi les compagnons du Prophète et le comprenait encore mieux que tous.<br>
+					<a href="bibliographie.html#massound"  class="lien">&#9758;</a>
+				</p>
 			</div>
 		</div>
-        <h5>Ibn Massound(~619)</h5>
+        <h5>Ibn Massound (~619)</h5>
         Maîtres: Le Prohète &#65018;<br>
 		&Eacute;lève: ibn Qays 
     </div>
   </div>
+  
+ <!-- Gallery: IMAM --> 
+   <div class="column imam">
+		<div class="content container" > 
+			<img src="img/ibnMassound.png"  alt="Imam Abû Hanifa" class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3em;">Oeuvres:</h2>
+					<ul>
+						 <li><b>Musnad Abou Hanifa :</b><br><small>Réunis en un seul volume par  al-Khwârezmî  en l'an 1266(665 H).<br> Pour composer cet ouvrage, l'auteur s'est appuyé sur une douzaine recueils de hadiths dans la tradition d'Abou Hanîfa</small></li>
+						 <li><b>Kitaab-ul-Aathaar:</b><br><small>70 000 hadiths compilé par ses deux élèves Abou Youssouf et Shaybânî </small>.</li>
+						 <li>Kitaabul Rad ala-l-Qaadiriyah </li>
+						 <li>
+						     <b>Al-'Âlim wa'l-Muta'allim :</b><br>
+							 <small>Présenté sous la forme de dialogues. L'ouvrage semble perdu.</small><br>
+							 <a href="bibliographie.html#abuhanifa" target="_blank" class="lien">&#9758;</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h5>Imam Abû Hanifa (~619)</h5>
+			Maîtres: &ensp;Anas Ibn Malik<br>
+			&Eacute;lève: &emsp; Abou Yoûsouf 
+		</div>
+  </div>
+  <div class="column imam">
+		<div class="content container" > 
+			<img src="img/imamMalik1.png"  alt="Imam Malik ( Malik ibn Anas )" class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>Al-Muwatta (anglais) :</b><small> (anglais)</small></li>
+						 <li><b>Tafsîr Gharîb Al-Qur’ân Al-Karîm:</b><br><small>Interprétation des singularités du Noble Coran </small></li>
+						 <li><b>Kitâb As-Surûr:</b><small>Le livre de la félicité</small></li>
+						 <li><b>Kitâb fî An-Nujûm wa Hisâb ... :</b><br><small>Livre des étoiles, du calcul du temps et des positions de la lune</small></li>
+						 <li><b>Risâlah fil Aqdiyah:</b><br><small>Traité sur les jugements.</small></li>
+						 <li>
+						     <b>Risâlah ilâ Ibn Wahb fil Qadar ... : </b><br>
+						     <small>Lettre à Ibn Wahb concernant la prédestination et la réfutation des qadarites.</small><br>
+						     <a href="bibliographie.html#malik" class="lien">&#9758;</a>	
+						 </li>
+					</ul>
+					
+				</div>
+			</div>
+			<h5>Imam Malika (~711)</h5>
+			Maîtres: Rabian bin Farrukh <br>
+			&Eacute;lève: &ensp; Ibn Al Qâssim
+		</div>
+  </div>
+    <div class="column imam">
+		<div class="content container" > 
+			<img src="img/chafi2.png" alt="Imam Shâfi'î" class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>Kitâb Al-Umm(Le livre exemplaire) :</b><br><small>Ouvrage de jurisprudence islamique. Il y a noté ses opinions sur diverses questions, et  rapporté des débats qu'il a eus avec d'autres oulémas, notamment hanafites et malékites. </small></li>
+						 <li><b>Ar-Risâlah fî Usûl Al-Fiqh:<br>Épître sur les fondements du droit</b><br><small>ouvrage de principes fondamentaux de jurisprudence.</small></li>
+					</ul>	 
+						 
+					 <p>
+					     Ses exégèses de certains versets du Coran ont été rassemblés par le chaféiste Al-Bayhaqiy dans un livre intitulé <b>Ayat ul-Ahkam</b>.<br>
+						 <a href="bibliographie.html#chafi" class="lien">&#9758;</a>	
+					 </p>
+				
+					
+				</div>
+			</div>
+			<h5>Imam Shâfi'î (767)</h5>
+			Maîtres: &ensp;Imam Malik  <br>
+			&Eacute;lève: &emsp; Imam Hanbal
+		</div>
+    </div>
+  
+    <div class="column imam">
+		<div class="content container" > 
+			<img src="img/hanbal.png" alt="Imam Hanbal " class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3.5em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>Le Mousnad (Le fondé) :</b><br><small>Ouvrage de référence. Classement des hadith suivant les chaînes de transmetteurs, remontant jusqu'à un des compagnons du Prophète &#65018; </small></li>
+					     <li><b>As Sunnah:</b></li> 
+						 <li><b>Az Zuhd(l’ascétisme):</b></li> 
+					     <li><b>Le mérite des compagnons:</b></li> 
+					</ul>	 
+					 <p>
+					     On doit à son fils Abdullâh(mort en 903), une compilation des réponses qu'il donnait aux questions qui lui étaient posées.<br>
+						 <a href="bibliographie.html#hanbal" class="lien">&#9758;</a>	
+					 </p>
+				</div>
+			</div>
+			<h5>Imam Hanbal (780)</h5>
+			Maîtres: &ensp;Imam Shâfi   <br>
+			&Eacute;lève: &emsp; Boukhari
+		</div>
+  </div>
 
 
   
-  <div class="column imam">
-    <div class="content">
-      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
+ <!-- Gallery: MUHADITH -->
+     <div class="column muhadith">
+		<div class="content container" > 
+			<img src="img/bouhari1.2.png" alt="Mouhammad al-Boukhârî  " class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3.5em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>SAHIH BOUHARI:</b><br><small>C'est le livre de référence de la SUNNA.<br> Après le Coran, le Sahih Bouhari reste encore, le livre le plus authentique(sahih) de l'Islam</small></li>
+						 <li><b>TAFSIR KABIR:</b></li>
+						 <li><b>TAREH KABIR:</b></li>
+						 <li><b>TAREH SAHIR:</b><br><small>synthèse de TEREH KABIR</small></li>
+						 <li> et beaucoup d'autres...</li>
+					</ul>	 
+					 <p>
+                         C'est l'un de nos écrivains les plus prolifiques. 
+						 <a href="bibliographie.html#bouhari" class="lien">&#9758;</a>	
+					 </p>
+				</div>
+			</div>
+			<h5>Mouhammad al-Boukhârî  (810)</h5>
+			Maîtres: &ensp;Imam Hanbal   <br>
+			&Eacute;lève: &emsp; Muslim
+		</div>
   </div>
-  <div class="column imam">
-    <div class="content">
-    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column imam">
-    <div class="content">
-    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
+  
+  <div class="column muhadith">
+		<div class="content container" > 
+			<img src="img/muslim1.png" alt="Mouhammad al-Boukhârî  " class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3.5em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>SAHIH MUSLIM:</b><br><small>Le célèbre recueil de hadîths authentiques.</small></li>
+						 <li><b>Al-Kunâ wal-Asmâ’</b></li>
+						 <li><b>Al-Munfaridât wal-Wijdân</b></li>
+						 <li>... etc</li>
+					</ul>	 
+					 <p>
+                         Beaucoup de ses ouvrages sont malheureusement perdus
+						 <a href="bibliographie.html#muslim" class="lien">&#9758;</a>	
+					 </p>
+				</div>
+			</div>
+			<h5>Muslim ibn al-Hajjaj  (821)</h5>
+			Maîtres: &ensp;BouKhari   <br>
+			&Eacute;lève: &emsp; Tirmidhi
+		</div>
   </div>
 
-  <div class="column muhadith">
-    <div class="content">
-      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
+
+  <!-- Gallery: Mufaçir -->
+  
+    <div class="column mufaçir">
+		<div class="content container" > 
+			<img src="img/ibnKathir.png" alt="Ibn Kathir " class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3.5em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>Tafsir ibn Kathir :</b><br><small> Il met les versets du Coran en relation avec les hadiths. Ce commentaire est très réputé et c'est un des plus répandu.</small></li>
+                         <li><b>Al Bidayah wa al-Nihayah <br>Le commencement et la fin .</b></li>
+                         <li><b>Les signes précurseurs <br>de la fin des temps</b></li>
+                         <li><b>Histoires des prophètes</b></li>
+                         <li><b>Les péchés et leurs conséquences</b></li>
+  
+						 <li>
+						       ... etc<br>
+							   <a href="bibliographie.html#ibnKathir" class="lien">&#9758;</a>
+						 </li>
+					</ul>	 
+				</div>
+			</div>
+			<h5>Ibn Kathir (1301)</h5>
+			Maîtres: &ensp;Ibn Taymiyyah   <br>
+			&Eacute;lève: &emsp; ???
+		</div>
   </div>
-  <div class="column muhadith">
-    <div class="content">
-    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
+  
+  <div class="column mufaçir">
+		<div class="content container" > 
+			<img src="img/suyuti.png" alt="Djalaleine " class="image">
+			<div class="overlay"  >
+				<div class="text">
+					<h2 style="padding-top:3.5em;">Oeuvres:</h2>
+					<ul>
+					     <!-- <li><b>...:</b><br><small>...</small></li> -->
+						 <li><b>Tafsir Djalaleine :</b><br><small> Commentaire des deux Jalal</small></li>
+                         <li><b>Les circonstances de la révélation</b></li> 
+						 <li><b>La médecine du Prophète.</b></li> 
+                         <li><b>Les habitudes d’Ibn Majah.</b></li> 
+                         <li><b>L'intérêt de la divergence entre les quatre écoles</b></li> 
+                         <li><b>Les conditions de l'invocation exaucée.</b></li> 
+                         <li><b>Histoire des Califes bien-guidés.</b></li> 
+						 <li>
+						       ... etc<br>
+							   <a href="bibliographie.html#a1" class="lien">&#9758;</a>
+						 </li>
+					</ul>	 
+				</div>
+			</div>
+			<h5>Jalâl E. as-Suyûtî (1445)</h5>
+			Maîtres: Jalal E. al-Mahallî    <br>
+			&Eacute;lève: &emsp; ???
+		</div>
   </div>
-  <div class="column muhadith">
-    <div class="content">
-    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+  
+  
+  
+  
+  
 <!-- END GRID -->
 </div>
 
