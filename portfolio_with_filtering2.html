@@ -73,9 +73,6 @@ h1 {
   background-color: #666;
   color: white;
 }
-/* btn de navigation alpha numerique */
-  
-
 
 </style>
 </head>
@@ -166,24 +163,24 @@ h1 {
 	<!-- END GRID -->
 	</div>
 
-	<div class="tabcontent" style=" margin-top:0; " >
+	<div class="tabcontent" id="tabcontent" style=" margin-top:0; " >
 		  <section class="containerPagination"  > 
 			<nav class="pagination"  >
-			  <a href="#" class="prev">&laquo;</a>
-			  <a   href="#" onclick="filterSelection('nature')">1</a>
-			  <a   href="#" onclick="filterSelection('cars')">2</a> 
-			  <a   href="#" onclick="filterSelection('people')>3</a>
+			  <a   href="#" class="prev">&laquo;</a>
+			  <a   href="#" onclick="filterSelection('nature')" class="btnAlfa">1</a>
+			  <a   href="#" onclick="filterSelection('cars')" class="btnAlfa">2</a> 
+			  <a   href="#" onclick="filterSelection('people')" class="btnAlfa">3</a>
 			  <a   href="#">4</a>
 			  <span>5</span>
 			  <a href="#" class="next">&raquo;</a>
 			</nav>
 			<nav class="pagination pagination-blue">
 			  <a   href="#" class="prev">&laquo;</a>
-			  <a   href="#">1</a>
-			  <a   href="#">2</a>
-			  <a   href="#">3</a>
-			  <span>4</span>
-			  <a   href="#">5</a>
+			  <a   href="#" class="btnAlfa">1</a>
+			  <a   href="#" class="btnAlfa">2</a>
+			  <a   href="#" class="btnAlfa">3</a>
+			  <span class="activer">4</span>
+			  <a   href="#" class="btnAlfa">5</a>
 			  <a   href="#" class="next">&raquo;</a>
 			</nav>
 		  </section>
@@ -237,6 +234,18 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+// idem pour la pagination alpha numerique: ce serait mieux de construire une fonction puisq c la mm chose
+       
+	var tabcontent = document.getElementById("tabcontent");
+	var btns = tabcontent.getElementsByClassName("btnAlfa");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+	  var current = document.getElementsByClassName("activer");
+	  current[0].className = current[0].className.replace(" activer", "");
+	  this.className += " activer";
+	  });
+	}
+	
 </script>
 
 </body>

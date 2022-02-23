@@ -100,7 +100,7 @@ body {
   background-color: #333;
   background-color: rgba(255, 255, 255, 0.05);
 }
-.pagination > span, .pagination > a:active {
+.pagination > span, .pagination > a.activer {
   color: #eee;
   text-shadow: 0 -1px black;
   background: #1c1c1c;
